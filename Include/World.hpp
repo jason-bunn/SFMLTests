@@ -6,6 +6,7 @@
 #include <tmx/MapLoader.h>
 
 #include <SFML/System/Time.hpp>
+#include <SFML/System/Clock.hpp>
 #include <SFML/Graphics/View.hpp>
 
 
@@ -22,12 +23,16 @@ public:
     void                        update(sf::Time dt);
     void                        draw();
 
+public:
+    sf::Clock                   mClock;
 private:
 
     sf::RenderTarget&           mTarget;
     sf::View                    mWorldView;
     sf::FloatRect               mWorldBounds;
     sf::Vector2f                mSpawnPosition;
+
+
 
     FontHolder&                 mFonts;
     tmx::MapLoader              mMapLoader;

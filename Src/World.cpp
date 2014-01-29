@@ -2,6 +2,9 @@
 
 #include <SFML/Graphics/RenderTarget.hpp>
 
+#include <iostream>
+
+
 
 World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
 : mTarget(outputTarget)
@@ -12,7 +15,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
 , mSpawnPosition(mWorldView.getSize().x / 2.0f, mWorldView.getSize().y / 2.0f)
 {
     mMapLoader.Load("TestArea.tmx");
-
+    mClock.restart();
 
 }
 

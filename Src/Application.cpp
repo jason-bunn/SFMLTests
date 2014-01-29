@@ -5,7 +5,7 @@
 #include <TitleState.hpp>
 #include <GameState.hpp>
 #include <MenuState.hpp>
-//#include <PauseState.hpp>
+#include <PauseState.hpp>
 //#include <SettingsState.hpp>
 //#incldue <GameOverState.hpp>
 
@@ -27,11 +27,12 @@ Application::Application()
     mWindow.setKeyRepeatEnabled(false);
 
     mFonts.load(Fonts::Main, "Media/SF Square Head.ttf");
+    mFonts.load(Fonts::InGame, "Media/8bm.ttf");
 
     //load menu and title images
     mTextures.load(Textures::TitleScreen, "Media/Images/MenuScreen.png");
     //load button images
-    mTextures.load(Textures::Buttons, "Media/Images/Buttons.png");
+    mTextures.load(Textures::Buttons, "Media/Images/NewButtons.png");
 
     //initialize framerate/debug text
     mStatisticsText.setFont(mFonts.get(Fonts::Main));
@@ -127,7 +128,7 @@ void Application::registerStates()
     mStateStack.registerState<TitleState>(States::Title);
     mStateStack.registerState<MenuState>(States::Menu);
     mStateStack.registerState<GameState>(States::Game);
-   // mStateStack.registerState<PauseState>(States::Pause);
+    mStateStack.registerState<PauseState>(States::Pause);
    // mStateStack.registerState<SettingsState>(States::Settings);
    // mStateStack.registerState<GameOverState>(States::GameOver);
 }

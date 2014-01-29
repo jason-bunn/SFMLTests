@@ -34,6 +34,7 @@ namespace GUI
 
         void                        setCallBack(Callback callback);
         void                        setText(const std::string& text);
+        void                        setText(const std::string& text, int charSize);
         void                        setToggle(bool flag);
 
         virtual bool                isSelectable() const;

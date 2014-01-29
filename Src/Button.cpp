@@ -31,6 +31,14 @@ namespace GUI
         centerOrigin(mText);
     }
 
+    void Button::setText(const std::string& text, int charSize)
+    {
+        mText.setString(text);
+        mText.setCharacterSize(charSize);
+
+        centerOrigin(mText);
+    }
+
     void Button::setToggle(bool flag)
     {
         mIsToggle = flag;

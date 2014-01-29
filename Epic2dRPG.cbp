@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -31,24 +32,27 @@
 		<Compiler>
 			<Add option="-std=c++11" />
 			<Add option="-Wall" />
-			<Add directory="D:/SFML-2.1/include" />
-			<Add directory="D:/Epic2dRPG/Include" />
+			<Add directory="C:/SFML-2.1/include" />
+			<Add directory="C:/Epic2dRPG/Include" />
 		</Compiler>
 		<Linker>
 			<Add library="sfml-graphics" />
 			<Add library="sfml-window" />
 			<Add library="sfml-system" />
 			<Add library="sfml-audio" />
-			<Add library="D:\Epic2dRPG\Lib\libzdll.a" />
-			<Add directory="D:/SFML-2.1/lib" />
-			<Add directory="D:/Epic2dRPG/Lib" />
+			<Add library="C:\Epic2dRPG\Lib\libzdll.a" />
+			<Add directory="C:/SFML-2.1/lib" />
+			<Add directory="C:/Epic2dRPG/Lib" />
 		</Linker>
 		<Unit filename="Include/Application.hpp" />
 		<Unit filename="Include/Button.hpp" />
 		<Unit filename="Include/Component.hpp" />
 		<Unit filename="Include/Container.hpp" />
 		<Unit filename="Include/ForEach.hpp" />
+		<Unit filename="Include/GameState.hpp" />
 		<Unit filename="Include/Label.hpp" />
+		<Unit filename="Include/MenuState.hpp" />
+		<Unit filename="Include/PauseState.hpp" />
 		<Unit filename="Include/Player.hpp" />
 		<Unit filename="Include/ResourceHolder.hpp" />
 		<Unit filename="Include/ResourceHolder.inl" />
@@ -59,16 +63,37 @@
 		<Unit filename="Include/TitleState.hpp" />
 		<Unit filename="Include/Utility.hpp" />
 		<Unit filename="Include/Utility.inl" />
+		<Unit filename="Include/World.hpp" />
+		<Unit filename="Include/pugixml/pugiconfig.hpp" />
+		<Unit filename="Include/pugixml/pugixml.hpp" />
+		<Unit filename="Include/tmx/MapLayer.h" />
+		<Unit filename="Include/tmx/MapLoader.h" />
+		<Unit filename="Include/tmx/MapObject.h" />
+		<Unit filename="Include/tmx/QuadTreeNode.h" />
+		<Unit filename="Include/tmx/tmx2box2d.h" />
+		<Unit filename="Include/zconf.h" />
+		<Unit filename="Include/zlib.h" />
 		<Unit filename="Src/Application.cpp" />
 		<Unit filename="Src/Button.cpp" />
 		<Unit filename="Src/Component.cpp" />
 		<Unit filename="Src/Container.cpp" />
+		<Unit filename="Src/DebugShape.cpp" />
+		<Unit filename="Src/GameState.cpp" />
 		<Unit filename="Src/Label.cpp" />
+		<Unit filename="Src/MapLayer.cpp" />
+		<Unit filename="Src/MapLoaderPrivate.cpp" />
+		<Unit filename="Src/MapLoaderPublic.cpp" />
+		<Unit filename="Src/MapObject.cpp" />
+		<Unit filename="Src/MenuState.cpp" />
+		<Unit filename="Src/PauseState.cpp" />
+		<Unit filename="Src/QuadTreeNode.cpp" />
 		<Unit filename="Src/State.cpp" />
 		<Unit filename="Src/StateStack.cpp" />
 		<Unit filename="Src/TitleState.cpp" />
 		<Unit filename="Src/Utility.cpp" />
+		<Unit filename="Src/World.cpp" />
 		<Unit filename="Src/main.cpp" />
+		<Unit filename="Src/pugixml/pugixml.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
