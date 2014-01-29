@@ -213,12 +213,13 @@
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1390883952 source:d:\epic2drpg\src\application.cpp
+1390970723 source:d:\epic2drpg\src\application.cpp
 	<Application.hpp>
 	<Utility.hpp>
 	<State.hpp>
 	<StateIdentifiers.hpp>
 	<TitleState.hpp>
+	<GameState.hpp>
 	<MenuState.hpp>
 	<iostream>
 
@@ -320,7 +321,7 @@
 	<ResourceHolder.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1390884776 source:d:\epic2drpg\src\menustate.cpp
+1390887337 source:d:\epic2drpg\src\menustate.cpp
 	<MenuState.hpp>
 	<Button.hpp>
 	<Utility.hpp>
@@ -342,4 +343,144 @@
 	<Utility.hpp>
 	<ResourceHolder.hpp>
 	<SFML/Graphics/RenderWindow.hpp>
+
+1390619969 source:d:\epic2drpg\src\debugshape.cpp
+	<DebugShape.h>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1390619968 d:\epic2drpg\include\debugshape.h
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+
+1390970288 source:d:\epic2drpg\src\gamestate.cpp
+	<GameState.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+
+1390969994 d:\epic2drpg\include\gamestate.hpp
+	<State.hpp>
+	<World.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1390970210 d:\epic2drpg\include\world.hpp
+	<ResourceHolder.hpp>
+	<ResourceIdentifiers.hpp>
+	<tmx/MapLoader.h>
+	<SFML/System/Time.hpp>
+	<SFML/Graphics/View.hpp>
+
+1390619968 d:\epic2drpg\include\tmx\maploader.h
+	<tmx/QuadTreeNode.h>
+	<tmx/MapLayer.h>
+	<pugixml/pugixml.hpp>
+	<iostream>
+	<array>
+	<cassert>
+
+1390619968 d:\epic2drpg\include\tmx\quadtreenode.h
+	<tmx/MapObject.h>
+	<memory>
+
+1390619968 d:\epic2drpg\include\tmx\mapobject.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	<memory>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<Helpers.h>
+	<DebugShape.h>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rectangleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\shape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/Vector2.hpp>
+
+1390619968 d:\epic2drpg\include\helpers.h
+	<math.h>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+
+1390619968 d:\epic2drpg\include\tmx\maplayer.h
+	<tmx/MapObject.h>
+	<memory>
+	<array>
+
+1390619968 d:\epic2drpg\include\pugixml\pugixml.hpp
+	"pugiconfig.hpp"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+
+1390619968 d:\epic2drpg\include\pugixml\pugiconfig.hpp
+
+1390619969 source:d:\epic2drpg\src\maplayer.cpp
+	<tmx/MapLayer.h>
+
+1390619969 source:d:\epic2drpg\src\maploaderprivate.cpp
+	<tmx/MapLoader.h>
+	<sstream>
+	<zlib.h>
+	<cstring>
+
+1390620881 d:\epic2drpg\include\zlib.h
+	"zconf.h"
+
+1390620881 d:\epic2drpg\include\zconf.h
+	<windows.h>
+	<limits.h>
+	<sys/types.h>
+	<stdarg.h>
+	<stddef.h>
+	<unistd.h>
+	<unixio.h>
+
+1390619969 source:d:\epic2drpg\src\maploaderpublic.cpp
+	<tmx/MapLoader.h>
+
+1390970409 source:d:\epic2drpg\src\mapobject.cpp
+	<tmx/MapObject.h>
+	<tmx/MapLayer.h>
+
+1390619969 source:d:\epic2drpg\src\pugixml\pugixml.cpp
+	<pugixml/pugixml.hpp>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<wchar.h>
+	<math.h>
+	<float.h>
+	<setjmp.h>
+	<istream>
+	<ostream>
+	<string>
+	<new>
+	<stdint.h>
+
+1390619969 source:d:\epic2drpg\src\quadtreenode.cpp
+	<tmx/QuadTreeNode.h>
+
+1390970484 source:d:\epic2drpg\src\world.cpp
+	<World.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
 

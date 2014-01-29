@@ -5,6 +5,7 @@
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 
+
 namespace GUI
 {
     Container::Container()
@@ -18,7 +19,7 @@ namespace GUI
     {
         mChildren.push_back(component);
 
-        if(hasSelection() && component->isSelectable())
+        if(!hasSelection() && component->isSelectable())
         {
             select(mChildren.size() -1);
         }
@@ -31,6 +32,7 @@ namespace GUI
 
     void Container::handleEvent(const sf::Event& event)
     {
+
         //if we have selected a child then give it events
         if(hasSelection() && mChildren[mSelectedChild]->isActive())
         {
@@ -51,6 +53,7 @@ namespace GUI
                 if (hasSelection())
                     mChildren[mSelectedChild]->activate();
             }
+
         }
     }
 
@@ -66,7 +69,7 @@ namespace GUI
 
     bool Container::hasSelection() const
     {
-        return mSelectedChild >=0;
+        return mSelectedChild >= 0;
     }
 
     void Container::select(std::size_t index)
@@ -100,6 +103,7 @@ namespace GUI
 
     void Container::selectPrevious()
     {
+
         if(!hasSelection())
             return;
 
