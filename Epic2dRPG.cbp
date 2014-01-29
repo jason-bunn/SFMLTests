@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Epic2dRPG" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Epic2dRPG" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Epic2dRPG" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add directory="D:/SFML-2.1/include" />
+			<Add directory="D:/Epic2dRPG/Include" />
+		</Compiler>
+		<Linker>
+			<Add library="sfml-graphics" />
+			<Add library="sfml-window" />
+			<Add library="sfml-system" />
+			<Add library="sfml-audio" />
+			<Add library="D:\Epic2dRPG\Lib\libzdll.a" />
+			<Add directory="D:/SFML-2.1/lib" />
+			<Add directory="D:/Epic2dRPG/Lib" />
+		</Linker>
+		<Unit filename="Include/Application.hpp" />
+		<Unit filename="Include/Button.hpp" />
+		<Unit filename="Include/Component.hpp" />
+		<Unit filename="Include/Container.hpp" />
+		<Unit filename="Include/ForEach.hpp" />
+		<Unit filename="Include/Label.hpp" />
+		<Unit filename="Include/Player.hpp" />
+		<Unit filename="Include/ResourceHolder.hpp" />
+		<Unit filename="Include/ResourceHolder.inl" />
+		<Unit filename="Include/ResourceIdentifiers.hpp" />
+		<Unit filename="Include/State.hpp" />
+		<Unit filename="Include/StateIdentifiers.hpp" />
+		<Unit filename="Include/StateStack.hpp" />
+		<Unit filename="Include/TitleState.hpp" />
+		<Unit filename="Include/Utility.hpp" />
+		<Unit filename="Include/Utility.inl" />
+		<Unit filename="Src/Application.cpp" />
+		<Unit filename="Src/Button.cpp" />
+		<Unit filename="Src/Component.cpp" />
+		<Unit filename="Src/Container.cpp" />
+		<Unit filename="Src/Label.cpp" />
+		<Unit filename="Src/State.cpp" />
+		<Unit filename="Src/StateStack.cpp" />
+		<Unit filename="Src/TitleState.cpp" />
+		<Unit filename="Src/Utility.cpp" />
+		<Unit filename="Src/main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
