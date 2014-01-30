@@ -4,6 +4,7 @@
 #include <ResourceHolder.hpp>
 #include <ResourceIdentifiers.hpp>
 #include <tmx/MapLoader.h>
+#include <tgd/System.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/System/Clock.hpp>
@@ -25,6 +26,7 @@ public:
 
 public:
     sf::Clock                   mClock;
+    tgd::System                 mySystem;
 private:
 
     sf::RenderTarget&           mTarget;

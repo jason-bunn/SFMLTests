@@ -745,10 +745,11 @@
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1391024494 c:\epic2drpg\include\world.hpp
+1391108901 c:\epic2drpg\include\world.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tmx/MapLoader.h>
+	<tgd/System.hpp>
 	<SFML/System/Time.hpp>
 	<SFML/System/Clock.hpp>
 	<SFML/Graphics/View.hpp>
@@ -968,7 +969,7 @@
 1391017594 source:c:\epic2drpg\src\quadtreenode.cpp
 	<tmx/QuadTreeNode.h>
 
-1391024472 source:c:\epic2drpg\src\world.cpp
+1391108935 source:c:\epic2drpg\src\world.cpp
 	<World.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<iostream>
@@ -988,16 +989,16 @@
 	<SFML/Graphics/RenderWindow.hpp>
 	<SFML/Graphics/View.hpp>
 
-1391026811 source:c:\epic2drpg\src\tgd\baseproperty.cpp
+1391028315 source:c:\epic2drpg\src\tgd\baseproperty.cpp
 	<tgd/BaseProperty.hpp>
 
-1391026782 c:\epic2drpg\include\tgd\baseproperty.hpp
-	<string>
+1391028305 c:\epic2drpg\include\tgd\baseproperty.hpp
+	<tgd/PropertyIdentifiers.hpp>
 
-1391026664 source:c:\epic2drpg\src\tgd\property.cpp
+1391028290 source:c:\epic2drpg\src\tgd\property.cpp
 	<tgd/Property.hpp>
 
-1391026737 c:\epic2drpg\include\tgd\property.hpp
+1391028266 c:\epic2drpg\include\tgd\property.hpp
 	<tgd/BaseProperty.hpp>
 
 1391048741 source:d:\epic2drpg\src\pausestate.cpp
@@ -1042,4 +1043,37 @@
 	<tgd/Controller.hpp>
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/System/Time.hpp>
+
+1391102509 source:c:\epic2drpg\src\controllers\playercontroller.cpp
+	<controllers/PlayerController.hpp>
+	<SFML/Window/Keyboard.hpp>
+
+1391099192 c:\epic2drpg\include\controllers\playercontroller.hpp
+	<tgd/PropertyIdentifiers.hpp>
+	<tgd/Controller.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/System/Time.hpp>
+
+1391099192 c:\epic2drpg\include\tgd\propertyidentifiers.hpp
+
+1391099192 c:\epic2drpg\include\tgd\controller.hpp
+
+1391099192 source:c:\epic2drpg\src\tgd\controller.cpp
+	<tgd/Controller.hpp>
+
+1391109887 source:c:\epic2drpg\src\tgd\entity.cpp
+	<tgd/Entity.hpp>
+
+1391109847 c:\epic2drpg\include\tgd\entity.hpp
+
+1391107997 source:c:\epic2drpg\src\tgd\system.cpp
+	<tgd/System.hpp>
+
+1391111625 c:\epic2drpg\include\tgd\system.hpp
+	<tgd/Entity.hpp>
+	<tgd/Controller.hpp>
+	<SFML/System/Time.hpp>
+	<unordered_map>
+	<map>
+	<vector>
 

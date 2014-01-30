@@ -1,23 +1,27 @@
 #ifndef ENTITIES_PLAYER_HPP
 #define ENTITIES_PLAYER_HPP
 
+#include <tgd/Entity.hpp>
 #include <tgd/Property.hpp>
 #include <tgd/PropertyIdentifiers.hpp>
 
 
 
-class Player
+class Player : public Entity
 {
 public:
                             Player(int id);
     template<typename T>
     void                    setProperty(Properties::ID id, T propValue);
     bool                    hasProperty(Properties::ID);
-    int                     retrieveAllProperties();
-    int                     getEntityID();
+    virtual int             retrieveAllProperties();
+    virtual int             getEntityID();
     bool                    isAlive() const;
+
+
+
 private:
-    int                     mID;
+
     std::vector<Property>   mProperties;
     bool                    mIsAlive;
 };
