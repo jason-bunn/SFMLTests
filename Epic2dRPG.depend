@@ -213,7 +213,7 @@
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1390970723 source:d:\epic2drpg\src\application.cpp
+1391048741 source:d:\epic2drpg\src\application.cpp
 	<Application.hpp>
 	<Utility.hpp>
 	<State.hpp>
@@ -221,6 +221,7 @@
 	<TitleState.hpp>
 	<GameState.hpp>
 	<MenuState.hpp>
+	<PauseState.hpp>
 	<iostream>
 
 1390791204 d:\epic2drpg\include\resourceholder.hpp
@@ -233,7 +234,7 @@
 
 1390883584 d:\epic2drpg\include\resourceholder.inl
 
-1390883507 d:\epic2drpg\include\resourceidentifiers.hpp
+1391048741 d:\epic2drpg\include\resourceidentifiers.hpp
 
 1390793947 d:\epic2drpg\include\player.hpp
 
@@ -279,14 +280,14 @@
 	<SFML/Graphics/Transformable.hpp>
 	<memory>
 
-1390885914 source:d:\epic2drpg\src\button.cpp
+1391048741 source:d:\epic2drpg\src\button.cpp
 	<Button.hpp>
 	<Utility.hpp>
 	<SFML/Window/Event.hpp>
 	<SFML/Graphics/RenderStates.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 
-1390796573 d:\epic2drpg\include\button.hpp
+1391048741 d:\epic2drpg\include\button.hpp
 	<Component.hpp>
 	<ResourceIdentifiers.hpp>
 	<ResourceHolder.hpp>
@@ -300,7 +301,7 @@
 1390796771 source:d:\epic2drpg\src\component.cpp
 	<Component.hpp>
 
-1390884658 source:d:\epic2drpg\src\container.cpp
+1390971535 source:d:\epic2drpg\src\container.cpp
 	<Container.hpp>
 	<ForEach.hpp>
 	<SFML/Window/Event.hpp>
@@ -353,7 +354,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/Transformable.hpp>
 
-1390970288 source:d:\epic2drpg\src\gamestate.cpp
+1391048741 source:d:\epic2drpg\src\gamestate.cpp
 	<GameState.hpp>
 	<SFML/Graphics/RenderWindow.hpp>
 
@@ -363,11 +364,12 @@
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1390970210 d:\epic2drpg\include\world.hpp
+1391048741 d:\epic2drpg\include\world.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tmx/MapLoader.h>
 	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
 	<SFML/Graphics/View.hpp>
 
 1390619968 d:\epic2drpg\include\tmx\maploader.h
@@ -480,9 +482,10 @@
 1390619969 source:d:\epic2drpg\src\quadtreenode.cpp
 	<tmx/QuadTreeNode.h>
 
-1390970484 source:d:\epic2drpg\src\world.cpp
+1391048741 source:d:\epic2drpg\src\world.cpp
 	<World.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
+	<iostream>
 
 1391022309 source:c:\epic2drpg\src\application.cpp
 	<Application.hpp>
@@ -996,4 +999,47 @@
 
 1391026737 c:\epic2drpg\include\tgd\property.hpp
 	<tgd/BaseProperty.hpp>
+
+1391048741 source:d:\epic2drpg\src\pausestate.cpp
+	<PauseState.hpp>
+	<Button.hpp>
+	<Utility.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/View.hpp>
+
+1391048741 source:d:\epic2drpg\src\tgd\baseproperty.cpp
+	<tgd/BaseProperty.hpp>
+
+1391048741 source:d:\epic2drpg\src\tgd\property.cpp
+	<tgd/Property.hpp>
+
+1391048741 d:\epic2drpg\include\pausestate.hpp
+	<State.hpp>
+	<Container.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1391048741 d:\epic2drpg\include\tgd\baseproperty.hpp
+	<tgd/PropertyIdentifiers.hpp>
+
+1391055077 d:\epic2drpg\include\tgd\propertyidentifiers.hpp
+
+1391048741 d:\epic2drpg\include\tgd\property.hpp
+	<tgd/BaseProperty.hpp>
+
+1391059944 source:d:\epic2drpg\src\tgd\controller.cpp
+	<tgd/Controller.hpp>
+
+1391059995 d:\epic2drpg\include\tgd\controller.hpp
+
+1391060638 source:d:\epic2drpg\src\controllers\playercontroller.cpp
+	<controllers/PlayerController.hpp>
+
+1391060706 d:\epic2drpg\include\controllers\playercontroller.hpp
+	<tgd/PropertyIdentifiers.hpp>
+	<tgd/Controller.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/System/Time.hpp>
 
