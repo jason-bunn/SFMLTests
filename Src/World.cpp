@@ -31,4 +31,5 @@ void World::update(sf::Time dt)
 void World::draw()
 {
     mTarget.draw(mMapLoader);
+    mySystem.draw(mTarget);
 }

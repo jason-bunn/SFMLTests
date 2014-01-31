@@ -9,10 +9,11 @@ namespace tgd
     {
     public:
 
-         virtual void           setID(Properties::ID id);
-         virtual Properties::ID getID();
+                    BaseProperty(Properties::ID id);
+         virtual    Properties::ID getID();
 
-    private:
+
+
         Properties::ID          mId;
 };
 }

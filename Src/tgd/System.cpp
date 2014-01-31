@@ -37,8 +37,9 @@ void tgd::System::update(sf::Time dt)
 
 }
 
-void tgd::System::draw()
+void tgd::System::draw(sf::RenderTarget& target)
 {
+    //access the player entity directly and access the visible property to draw directly. for testing only
 
 }
 

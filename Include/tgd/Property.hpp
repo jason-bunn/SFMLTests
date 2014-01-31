@@ -12,11 +12,11 @@ namespace tgd
                                 Property(Properties::ID id, T typeValue);
         T                       getValue();
         void                    setValue(T newValue);
-
+        virtual Properties::ID  getID();
     private:
         T                       mValue;
 
     };
 }
-
+#include "Property.inl"
 #endif // TGD_PROPERTY_HPP

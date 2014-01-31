@@ -20,3 +20,7 @@ int tgd::Entity::retrieveAllProperties()
 {
 
 }
+
+std::shared_ptr<tgd::BaseProperty> tgd::Entity::accessProperty(Properties::ID id)
+{
+}

@@ -7,6 +7,8 @@
 #include <tgd/Controller.hpp>
 
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
 
 #include <unordered_map>
 #include <map>
@@ -26,7 +28,7 @@ namespace tgd
         template <typename T>
         void                        registerEntity(std::shared_ptr<T> entity);
         void                        update(sf::Time dt);
-        void                        draw();
+        void                        draw(sf::RenderTarget& target);
 
         template <typename T>
         void                        createEntity();

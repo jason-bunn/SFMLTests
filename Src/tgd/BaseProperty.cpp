@@ -1,6 +1,6 @@
 #include <tgd/BaseProperty.hpp>
 
-void tgd::BaseProperty::setID(Properties::ID id)
+tgd::BaseProperty::BaseProperty(Properties::ID id)
 {
     mId = id;
 }
