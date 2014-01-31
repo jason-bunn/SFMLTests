@@ -364,10 +364,11 @@
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1391048741 d:\epic2drpg\include\world.hpp
+1391137655 d:\epic2drpg\include\world.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tmx/MapLoader.h>
+	<tgd/System.hpp>
 	<SFML/System/Time.hpp>
 	<SFML/System/Clock.hpp>
 	<SFML/Graphics/View.hpp>
@@ -482,8 +483,9 @@
 1390619969 source:d:\epic2drpg\src\quadtreenode.cpp
 	<tmx/QuadTreeNode.h>
 
-1391048741 source:d:\epic2drpg\src\world.cpp
+1391145273 source:d:\epic2drpg\src\world.cpp
 	<World.hpp>
+	<entities/Player.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<iostream>
 
@@ -1025,18 +1027,19 @@
 1391048741 d:\epic2drpg\include\tgd\baseproperty.hpp
 	<tgd/PropertyIdentifiers.hpp>
 
-1391055077 d:\epic2drpg\include\tgd\propertyidentifiers.hpp
+1391142607 d:\epic2drpg\include\tgd\propertyidentifiers.hpp
 
 1391048741 d:\epic2drpg\include\tgd\property.hpp
 	<tgd/BaseProperty.hpp>
 
-1391059944 source:d:\epic2drpg\src\tgd\controller.cpp
+1391060721 source:d:\epic2drpg\src\tgd\controller.cpp
 	<tgd/Controller.hpp>
 
 1391059995 d:\epic2drpg\include\tgd\controller.hpp
 
-1391060638 source:d:\epic2drpg\src\controllers\playercontroller.cpp
+1391137655 source:d:\epic2drpg\src\controllers\playercontroller.cpp
 	<controllers/PlayerController.hpp>
+	<SFML/Window/Keyboard.hpp>
 
 1391060706 d:\epic2drpg\include\controllers\playercontroller.hpp
 	<tgd/PropertyIdentifiers.hpp>
@@ -1076,4 +1079,36 @@
 	<unordered_map>
 	<map>
 	<vector>
+
+1391150057 d:\epic2drpg\include\tgd\system.hpp
+	<tgd/Entity.hpp>
+	<entities/Player.hpp>
+	<tgd/Controller.hpp>
+	<SFML/System/Time.hpp>
+	<unordered_map>
+	<map>
+	<vector>
+	<memory>
+	"System.inl"
+
+1391150563 d:\epic2drpg\include\tgd\entity.hpp
+
+1391146698 source:d:\epic2drpg\src\tgd\entity.cpp
+	<tgd/Entity.hpp>
+
+1391149988 source:d:\epic2drpg\src\tgd\system.cpp
+	<tgd/System.hpp>
+	<iostream>
+
+1391149194 d:\epic2drpg\include\entities\player.hpp
+	<tgd/Entity.hpp>
+	<tgd/Property.hpp>
+	<tgd/PropertyIdentifiers.hpp>
+	<vector>
+
+1391149864 d:\epic2drpg\include\tgd\system.inl
+
+1391150579 source:d:\epic2drpg\src\entities\player.cpp
+	<entities/Player.hpp>
+	<iostream>
 

@@ -6,6 +6,11 @@ tgd::Entity::Entity(int id)
 
 }
 
+tgd::Entity::~Entity()
+{
+
+}
+
 int tgd::Entity::getEntityID()
 {
     return mID;

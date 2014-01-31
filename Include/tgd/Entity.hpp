@@ -7,10 +7,10 @@ namespace tgd
     {
     public:
                         Entity(int id);
-
+        virtual         ~Entity();
         virtual int     getEntityID();
         virtual int     retrieveAllProperties();
-    private:
+
         int             mID;
     };
 }

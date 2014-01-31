@@ -5,25 +5,25 @@
 #include <tgd/Property.hpp>
 #include <tgd/PropertyIdentifiers.hpp>
 
+#include <vector>
 
-
-class Player : public Entity
+class Player : public tgd::Entity
 {
 public:
                             Player(int id);
-    template<typename T>
-    void                    setProperty(Properties::ID id, T propValue);
+                            ~Player();
     bool                    hasProperty(Properties::ID);
-    virtual int             retrieveAllProperties();
-    virtual int             getEntityID();
+    int             retrieveAllProperties();
+    int             getEntityID();
     bool                    isAlive() const;
 
-
+    void                    initializeProperties();
 
 private:
 
-    std::vector<Property>   mProperties;
+    std::vector<tgd::BaseProperty>   mProperties;
     bool                    mIsAlive;
+    int                     mPropMask;
 };
 
 #endif // ENTITIES_PLAYER_HPP

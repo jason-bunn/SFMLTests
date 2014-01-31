@@ -1,5 +1,7 @@
 #include <World.hpp>
 
+#include <entities/Player.hpp>
+
 #include <SFML/Graphics/RenderTarget.hpp>
 
 #include <iostream>
@@ -17,6 +19,8 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
     mMapLoader.Load("TestArea.tmx");
     mClock.restart();
 
+
+    mySystem.createEntity<Player>();
 }
 
 void World::update(sf::Time dt)

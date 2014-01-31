@@ -10,7 +10,7 @@ namespace Properties
         Collider = 1 << 2,
         Visible = 1 << 3,       //visible but static
         PC = 1 << 4,            //player controlled
-        Animattion = 1 << 5,    //visible but animated
+        Animation = 1 << 5,    //visible but animated
     };
 }
 #endif // TGD_PROPERTYIDENTIFIERS_HPP
