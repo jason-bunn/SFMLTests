@@ -33,6 +33,8 @@ namespace tgd
         template <typename T>
         void                        createEntity();
 
+        std::shared_ptr<Entity>     fetchEntity(int eID);
+
     private:
         void                        checkProperties(int id);
         void                        assignControllers(int id);
@@ -45,6 +47,8 @@ namespace tgd
         unsigned int                 mEntityCount;
     };
 #include "System.inl"
+
+
 #endif // TGD_SYSTEM_HPP
 
 

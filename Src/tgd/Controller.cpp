@@ -1,7 +1,13 @@
 #include <tgd/Controller.hpp>
 
-tgd::Controller::Controller(int id)
+tgd::Controller::Controller(int id, int eID)
 : mID(id)
+, mEID(eID)
+{
+
+}
+
+tgd::Controller::~Controller()
 {
 
 }
@@ -9,5 +15,10 @@ tgd::Controller::Controller(int id)
 int tgd::Controller::getID()
 {
     return mID;
+}
+
+int tgd::Controller::getEntityID()
+{
+    return mEID;
 }
 

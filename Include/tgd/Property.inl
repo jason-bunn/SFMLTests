@@ -7,15 +7,21 @@ tgd::Property<T>::Property(Properties::ID id, T typeValue)
 }
 
 template <typename T>
+tgd::Property<T>::~Property()
+{
+
+}
+
+template <typename T>
 void tgd::Property<T>::setValue(T newValue)
 {
     mValue = newValue;
 }
 
 template <typename T>
-T tgd::Property<T>::getValue()
+T* tgd::Property<T>::getValue()
 {
-    return mValue;
+    return &mValue;
 }
 
 template <typename T>

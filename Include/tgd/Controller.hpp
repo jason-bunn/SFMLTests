@@ -5,12 +5,13 @@ namespace tgd
    class Controller
     {
     public:
-                            Controller(int id);
-
+                            Controller(int id, int eID);
+        virtual             ~Controller();
         virtual int         getID();
-
+        virtual int         getEntityID();
     private:
         int                 mID;
+        int                 mEID;
     };
 }
 

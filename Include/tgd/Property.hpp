@@ -10,7 +10,8 @@ namespace tgd
     {
     public:
                                 Property(Properties::ID id, T typeValue);
-        T                       getValue();
+                                ~Property();
+        T*                       getValue();
         void                    setValue(T newValue);
         virtual Properties::ID  getID();
     private:

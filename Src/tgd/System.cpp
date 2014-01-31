@@ -60,4 +60,9 @@ void tgd::System::createFactory(int id)
 
 }
 
+std::shared_ptr<tgd::Entity> tgd::System::fetchEntity(int eID)
+{
+    return mEntities[eID];
+}
+
 

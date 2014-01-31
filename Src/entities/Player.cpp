@@ -48,7 +48,7 @@ std::shared_ptr<tgd::BaseProperty> Player::accessProperty(Properties::ID id)
 
 bool Player::hasProperty(Properties::ID id)
 {
-
+    return false;
 }
 
 int Player::retrieveAllProperties()

@@ -1,8 +1,8 @@
 #include <controllers/PlayerController.hpp>
 #include <SFML/Window/Keyboard.hpp>
 
-PlayerController::PlayerController(int id)
-: Controller(id)
+PlayerController::PlayerController(int id, int eID)
+: Controller(id, eID)
 , mMoveVector()
 , mSprite(nullptr)
 {
@@ -54,6 +54,11 @@ int PlayerController::getRequirements()
 int PlayerController::getID()
 {
     return Controller::getID();
+}
+
+int PlayerController::getEntityID()
+{
+    return Controller::getEntityID();
 }
 
 void PlayerController::setVelocity(sf::Vector2f moveVector)

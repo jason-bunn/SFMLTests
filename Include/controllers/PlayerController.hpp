@@ -10,7 +10,7 @@
 class PlayerController : public tgd::Controller
 {
 public:
-                        PlayerController(int id);
+                        PlayerController(int id, int eID);
                         ~PlayerController();
 
     void                update(sf::Time dt);
@@ -18,7 +18,7 @@ public:
     int                 getRequirements();
 
     virtual int         getID();
-
+    virtual int         getEntityID();
     void                setVelocity(sf::Vector2f moveVector);
     //sf::Vector2f        getVelocity();
 
