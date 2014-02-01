@@ -21,7 +21,7 @@ public:
     virtual int     getEntityID();
 
     void            retrieveProperties(int eID, tgd::System& mSystem);
-    void            draw(sf::RenderTarget& target);
+    virtual void            draw(sf::RenderTarget& target);
 
     private:
     int             mID;

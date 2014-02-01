@@ -32,6 +32,6 @@ void RenderController::retrieveProperties(int eID, tgd::System& system)
 
 void RenderController::draw(sf::RenderTarget& target)
 {
-
+    target.draw(*mBodySprite);
 }
 

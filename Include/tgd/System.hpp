@@ -6,6 +6,7 @@
 
 #include <tgd/Controller.hpp>
 
+
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -15,7 +16,7 @@
 #include <vector>
 #include <memory>
 
-class Player;
+class RenderController;
 
 namespace tgd
 {
@@ -44,14 +45,11 @@ namespace tgd
     private:
         std::unordered_map<int, std::vector<Controller*>> controllerMap;
         std::map<unsigned int, std::shared_ptr<Entity>>   mEntities;
-        unsigned int                 mEntityCount;
+        std::vector<std::shared_ptr<Controller>>          mRenderControllers;
+        unsigned int                                      mEntityCount;
     };
-#include "System.inl"
-
-
-#endif // TGD_SYSTEM_HPP
-
-
-
 
 }
+#include "System.inl"
+#endif // TGD_SYSTEM_HPP
+

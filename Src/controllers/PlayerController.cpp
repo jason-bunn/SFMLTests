@@ -21,6 +21,11 @@ void PlayerController::update(sf::Time dt)
     setVelocity(mMoveVector);
 }
 
+void PlayerController::draw(sf::RenderTarget& target)
+{
+
+}
+
 void PlayerController::handleRealtimeInput()
 {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))

@@ -65,6 +65,7 @@
 		<Unit filename="Include/Utility.inl" />
 		<Unit filename="Include/World.hpp" />
 		<Unit filename="Include/controllers/PlayerController.hpp" />
+		<Unit filename="Include/controllers/RenderController.hpp" />
 		<Unit filename="Include/entities/Player.hpp" />
 		<Unit filename="Include/pugixml/pugiconfig.hpp" />
 		<Unit filename="Include/pugixml/pugixml.hpp" />
@@ -72,8 +73,10 @@
 		<Unit filename="Include/tgd/Controller.hpp" />
 		<Unit filename="Include/tgd/Entity.hpp" />
 		<Unit filename="Include/tgd/Property.hpp" />
+		<Unit filename="Include/tgd/Property.inl" />
 		<Unit filename="Include/tgd/PropertyIdentifiers.hpp" />
 		<Unit filename="Include/tgd/System.hpp" />
+		<Unit filename="Include/tgd/System.inl" />
 		<Unit filename="Include/tmx/MapLayer.h" />
 		<Unit filename="Include/tmx/MapLoader.h" />
 		<Unit filename="Include/tmx/MapObject.h" />
@@ -101,6 +104,8 @@
 		<Unit filename="Src/Utility.cpp" />
 		<Unit filename="Src/World.cpp" />
 		<Unit filename="Src/controllers/PlayerController.cpp" />
+		<Unit filename="Src/controllers/RenderController.cpp" />
+		<Unit filename="Src/entities/Player.cpp" />
 		<Unit filename="Src/main.cpp" />
 		<Unit filename="Src/pugixml/pugixml.cpp" />
 		<Unit filename="Src/tgd/BaseProperty.cpp" />

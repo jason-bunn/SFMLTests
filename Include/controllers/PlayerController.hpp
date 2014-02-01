@@ -4,6 +4,7 @@
 #include <tgd/PropertyIdentifiers.hpp>
 #include <tgd/Controller.hpp>
 
+#include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/System/Time.hpp>
 
@@ -19,6 +20,8 @@ public:
 
     virtual int         getID();
     virtual int         getEntityID();
+    virtual void        draw(sf::RenderTarget&);
+
     void                setVelocity(sf::Vector2f moveVector);
     //sf::Vector2f        getVelocity();
 

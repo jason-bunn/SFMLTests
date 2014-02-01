@@ -1,8 +1,10 @@
 #include <tgd/System.hpp>
 #include <iostream>
 
+
 tgd::System::System()
 : controllerMap()
+, mRenderControllers()
 , mEntityCount(0)
 , mEntities()
 {
@@ -40,7 +42,10 @@ void tgd::System::update(sf::Time dt)
 void tgd::System::draw(sf::RenderTarget& target)
 {
     //access the player entity directly and access the visible property to draw directly. for testing only
-
+    for(auto itr = mRenderControllers.begin(); itr != mRenderControllers.end(); ++itr)
+    {
+        (*itr)->draw(target);
+    }
 }
 
 void tgd::System::checkProperties(int id)
