@@ -4,20 +4,22 @@
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.fonts)
-//,mPlayer(*context.player)
+, mSystem(*context.textures, *context.window)
 {
 
+    mSystem.createEntity<Player>();
 }
 
 void GameState::draw()
 {
     mWorld.draw();
+    mSystem.draw();
 }
 
 bool GameState::update(sf::Time dt)
 {
     mWorld.update(dt);
-
+    mSystem.update(dt);
     //CommandQueue& commands = mScene.getCommandQueue();
     //mPlayer.handleRealtimeInput(commands);
 

@@ -26,7 +26,7 @@ public:
 
 public:
     sf::Clock                   mClock;
-    tgd::System                 mySystem;
+
 private:
 
     sf::RenderTarget&           mTarget;

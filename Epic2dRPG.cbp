@@ -32,17 +32,17 @@
 		<Compiler>
 			<Add option="-std=c++11" />
 			<Add option="-Wall" />
-			<Add directory="C:/SFML-2.1/include" />
-			<Add directory="C:/Epic2dRPG/Include" />
+			<Add directory="D:/SFML-2.1/include" />
+			<Add directory="D:/Epic2dRPG/Include" />
 		</Compiler>
 		<Linker>
 			<Add library="sfml-graphics" />
 			<Add library="sfml-window" />
 			<Add library="sfml-system" />
 			<Add library="sfml-audio" />
-			<Add library="C:\Epic2dRPG\Lib\libzdll.a" />
-			<Add directory="C:/SFML-2.1/lib" />
-			<Add directory="C:/Epic2dRPG/Lib" />
+			<Add library="D:\Epic2dRPG\Lib\libzdll.a" />
+			<Add directory="D:/SFML-2.1/lib" />
+			<Add directory="D:/Epic2dRPG/Lib" />
 		</Linker>
 		<Unit filename="Include/Application.hpp" />
 		<Unit filename="Include/Button.hpp" />

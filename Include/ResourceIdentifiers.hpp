@@ -16,6 +16,7 @@ namespace Textures
         TitleScreen,
         Buttons,
         Particle,
+        PlayerBoy,
     };
 }
 

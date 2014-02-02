@@ -20,7 +20,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
     mClock.restart();
 
 
-    mySystem.createEntity<Player>();
+    //mySystem.createEntity<Player>();
 }
 
 void World::update(sf::Time dt)
@@ -31,5 +31,5 @@ void World::update(sf::Time dt)
 void World::draw()
 {
     mTarget.draw(mMapLoader);
-    mySystem.draw(mTarget);
+    //mySystem.draw(mTarget);
 }

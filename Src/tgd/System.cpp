@@ -2,13 +2,16 @@
 #include <iostream>
 
 
-tgd::System::System()
+tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 : controllerMap()
 , mRenderControllers()
 , mEntityCount(0)
 , mEntities()
+, textureHolder(textures)
+, mTarget(target)
 {
-
+    //textureHolder = textures;
+    //mTarget = target;
 }
 
 tgd::System::~System()
@@ -22,7 +25,7 @@ void tgd::System::createEntity()
     T entity = new T(mEntityCount);
     T *entPtr = &entity;
     registerEntity(entity);
-    mEntityCount++;
+    mEntityCount++;m
 }
 
 void tgd::System::registerEntity(std::shared_ptr<Entity> entity)
@@ -39,12 +42,12 @@ void tgd::System::update(sf::Time dt)
 
 }
 
-void tgd::System::draw(sf::RenderTarget& target)
+void tgd::System::draw()
 {
     //access the player entity directly and access the visible property to draw directly. for testing only
     for(auto itr = mRenderControllers.begin(); itr != mRenderControllers.end(); ++itr)
     {
-        (*itr)->draw(target);
+        (*itr)->draw(mTarget);
     }
 }
 

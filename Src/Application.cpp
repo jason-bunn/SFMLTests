@@ -33,6 +33,8 @@ Application::Application()
     mTextures.load(Textures::TitleScreen, "Media/Images/MenuScreen.png");
     //load button images
     mTextures.load(Textures::Buttons, "Media/Images/NewButtons.png");
+    //load initial player sprite -> shove off to resource loader later
+    mTextures.load(Textures::PlayerBoy, "Media/Images/boy_sheet.png");
 
     //initialize framerate/debug text
     mStatisticsText.setFont(mFonts.get(Fonts::Main));

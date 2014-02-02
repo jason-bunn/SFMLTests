@@ -21,7 +21,7 @@ void Player::initializeProperties()
 {
     //setup sprite test here, should be moved later to renderer controller
     sf::Texture playerTexture;
-    playerTexture.loadFromFile("Media/Images/boy_sheet.png");
+    //nab texture from texture holder
 
     sf::Sprite mySprite;
     mySprite.setTexture(playerTexture);

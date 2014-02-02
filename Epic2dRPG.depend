@@ -1,0 +1,601 @@
+# depslib dependency file v1.0
+1391309169 source:d:\epic2drpg\src\application.cpp
+	<Application.hpp>
+	<Utility.hpp>
+	<State.hpp>
+	<StateIdentifiers.hpp>
+	<TitleState.hpp>
+	<GameState.hpp>
+	<MenuState.hpp>
+	<PauseState.hpp>
+	<iostream>
+
+1390885072 d:\epic2drpg\include\application.hpp
+	<Utility.hpp>
+	<ResourceHolder.hpp>
+	<ResourceIdentifiers.hpp>
+	<StateStack.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/Window/Event.hpp>
+
+1390627625 d:\epic2drpg\include\utility.hpp
+	<sstream>
+	<Utility.inl>
+
+1390627694 d:\epic2drpg\include\utility.inl
+
+1390791204 d:\epic2drpg\include\resourceholder.hpp
+	<map>
+	<string>
+	<memory>
+	<stdexcept>
+	<cassert>
+	"ResourceHolder.inl"
+
+1390883584 d:\epic2drpg\include\resourceholder.inl
+
+1391309106 d:\epic2drpg\include\resourceidentifiers.hpp
+
+1390793867 d:\epic2drpg\include\statestack.hpp
+	<State.hpp>
+	<StateIdentifiers.hpp>
+	<ResourceIdentifiers.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/Time.hpp>
+	<vector>
+	<utility>
+	<functional>
+	<map>
+
+1390885772 d:\epic2drpg\include\state.hpp
+	<StateIdentifiers.hpp>
+	<ResourceIdentifiers.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Window/Event.hpp>
+	<memory>
+
+1390878302 d:\epic2drpg\include\stateidentifiers.hpp
+
+1388960943 d:\sfml-2.1\include\sfml\system\time.hpp
+	<SFML/System/Export.hpp>
+
+1388960943 d:\sfml-2.1\include\sfml\system\export.hpp
+	<SFML/Config.hpp>
+
+1388960941 d:\sfml-2.1\include\sfml\config.hpp
+
+1388960944 d:\sfml-2.1\include\sfml\window\event.hpp
+	<SFML/Config.hpp>
+	<SFML/Window/Joystick.hpp>
+	<SFML/Window/Keyboard.hpp>
+	<SFML/Window/Mouse.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\joystick.hpp
+	<SFML/Window/Export.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\export.hpp
+	<SFML/Config.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\keyboard.hpp
+	<SFML/Window/Export.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\mouse.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/System/Vector2.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\system\vector2.hpp
+	<SFML/System/Vector2.inl>
+
+1388960944 d:\sfml-2.1\include\sfml\system\vector2.inl
+
+1388960943 d:\sfml-2.1\include\sfml\system\noncopyable.hpp
+	<SFML/System/Export.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\renderwindow.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Window/Window.hpp>
+	<string>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\export.hpp
+	<SFML/Config.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rendertarget.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/System/NonCopyable.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\color.hpp
+	<SFML/Graphics/Export.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rect.hpp
+	<SFML/System/Vector2.hpp>
+	<algorithm>
+	<SFML/Graphics/Rect.inl>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rect.inl
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\view.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Transform.hpp>
+	<SFML/System/Vector2.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\transform.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\blendmode.hpp
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\renderstates.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/BlendMode.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\primitivetype.hpp
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\vertex.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/System/Vector2.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\image.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<string>
+	<vector>
+
+1388960944 d:\sfml-2.1\include\sfml\window\window.hpp
+	<SFML/Window/Export.hpp>
+	<SFML/Window/ContextSettings.hpp>
+	<SFML/Window/VideoMode.hpp>
+	<SFML/Window/WindowHandle.hpp>
+	<SFML/Window/WindowStyle.hpp>
+	<SFML/Window/GlResource.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<SFML/System/String.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\contextsettings.hpp
+
+1388960944 d:\sfml-2.1\include\sfml\window\videomode.hpp
+	<SFML/Window/Export.hpp>
+	<vector>
+
+1388960944 d:\sfml-2.1\include\sfml\window\windowhandle.hpp
+	<SFML/Config.hpp>
+
+1388960944 d:\sfml-2.1\include\sfml\window\windowstyle.hpp
+
+1388960944 d:\sfml-2.1\include\sfml\window\glresource.hpp
+	<SFML/Window/Export.hpp>
+
+1388960943 d:\sfml-2.1\include\sfml\system\clock.hpp
+	<SFML/System/Export.hpp>
+	<SFML/System/Time.hpp>
+
+1388960943 d:\sfml-2.1\include\sfml\system\string.hpp
+	<SFML/System/Export.hpp>
+	<locale>
+	<string>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\text.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/String.hpp>
+	<string>
+	<vector>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\drawable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\transformable.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Transform.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\font.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Glyph.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+	<SFML/System/String.hpp>
+	<map>
+	<string>
+	<vector>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\glyph.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\texture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Window/GlResource.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\vertexarray.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/PrimitiveType.hpp>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<vector>
+
+1390884938 d:\epic2drpg\include\titlestate.hpp
+	<State.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\sprite.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/Vertex.hpp>
+	<SFML/Graphics/Rect.hpp>
+
+1391311533 d:\epic2drpg\include\gamestate.hpp
+	<State.hpp>
+	<World.hpp>
+	<entities/Player.hpp>
+	<tgd/System.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1391309766 d:\epic2drpg\include\world.hpp
+	<ResourceHolder.hpp>
+	<ResourceIdentifiers.hpp>
+	<tmx/MapLoader.h>
+	<tgd/System.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/System/Clock.hpp>
+	<SFML/Graphics/View.hpp>
+
+1390619968 d:\epic2drpg\include\tmx\maploader.h
+	<tmx/QuadTreeNode.h>
+	<tmx/MapLayer.h>
+	<pugixml/pugixml.hpp>
+	<iostream>
+	<array>
+	<cassert>
+
+1390619968 d:\epic2drpg\include\tmx\quadtreenode.h
+	<tmx/MapObject.h>
+	<memory>
+
+1390619968 d:\epic2drpg\include\tmx\mapobject.h
+	<string>
+	<vector>
+	<map>
+	<iostream>
+	<memory>
+	<SFML/Graphics/Color.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Font.hpp>
+	<SFML/Graphics/Image.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+	<SFML/System/NonCopyable.hpp>
+	<Helpers.h>
+	<DebugShape.h>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rectangleshape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Shape.hpp>
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\shape.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/System/Vector2.hpp>
+
+1390619968 d:\epic2drpg\include\helpers.h
+	<math.h>
+	<SFML/Graphics/Rect.hpp>
+	<SFML/System/Vector2.hpp>
+
+1390619968 d:\epic2drpg\include\debugshape.h
+	<SFML/Graphics/VertexArray.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+
+1390619968 d:\epic2drpg\include\tmx\maplayer.h
+	<tmx/MapObject.h>
+	<memory>
+	<array>
+
+1390619968 d:\epic2drpg\include\pugixml\pugixml.hpp
+	"pugiconfig.hpp"
+	<stddef.h>
+	<exception>
+	<iterator>
+	<iosfwd>
+	<string>
+
+1390619968 d:\epic2drpg\include\pugixml\pugiconfig.hpp
+
+1391311892 d:\epic2drpg\include\tgd\system.hpp
+	<ResourceHolder.hpp>
+	<ResourceIdentifiers.hpp>
+	<tgd/Entity.hpp>
+	<entities/Player.hpp>
+	<tgd/Controller.hpp>
+	<SFML/System/Time.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<unordered_map>
+	<map>
+	<vector>
+	<memory>
+	"System.inl"
+
+1391266601 d:\epic2drpg\include\tgd\entity.hpp
+	<tgd/BaseProperty.hpp>
+	<memory>
+
+1391266601 d:\epic2drpg\include\tgd\baseproperty.hpp
+	<tgd/PropertyIdentifiers.hpp>
+
+1391142607 d:\epic2drpg\include\tgd\propertyidentifiers.hpp
+
+1391266601 d:\epic2drpg\include\entities\player.hpp
+	<tgd/Entity.hpp>
+	<tgd/Property.hpp>
+	<tgd/PropertyIdentifiers.hpp>
+	<Utility.hpp>
+	<SFML/Graphics/RenderTexture.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/System/Vector2.hpp>
+	<vector>
+	<memory>
+
+1391266601 d:\epic2drpg\include\tgd\property.hpp
+	<tgd/BaseProperty.hpp>
+	"Property.inl"
+
+1391266601 d:\epic2drpg\include\tgd\property.inl
+
+1388960942 d:\sfml-2.1\include\sfml\graphics\rendertexture.hpp
+	<SFML/Graphics/Export.hpp>
+	<SFML/Graphics/Texture.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1391266601 d:\epic2drpg\include\tgd\controller.hpp
+	<SFML/Graphics/RenderTarget.hpp>
+
+1391149864 d:\epic2drpg\include\tgd\system.inl
+
+1390881474 d:\epic2drpg\include\menustate.hpp
+	<State.hpp>
+	<Container.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1390884643 d:\epic2drpg\include\container.hpp
+	<Component.hpp>
+	<vector>
+	<memory>
+
+1390885652 d:\epic2drpg\include\component.hpp
+	<SFML/System/NonCopyable.hpp>
+	<SFML/Graphics/Drawable.hpp>
+	<SFML/Graphics/Transformable.hpp>
+	<memory>
+
+1391048741 d:\epic2drpg\include\pausestate.hpp
+	<State.hpp>
+	<Container.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1391048741 source:d:\epic2drpg\src\button.cpp
+	<Button.hpp>
+	<Utility.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1391048741 d:\epic2drpg\include\button.hpp
+	<Component.hpp>
+	<ResourceIdentifiers.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+	<vector>
+	<string>
+	<memory>
+	<functional>
+
+1390796771 source:d:\epic2drpg\src\component.cpp
+	<Component.hpp>
+
+1390971535 source:d:\epic2drpg\src\container.cpp
+	<Container.hpp>
+	<ForEach.hpp>
+	<SFML/Window/Event.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1390794792 d:\epic2drpg\include\foreach.hpp
+
+1391266601 source:d:\epic2drpg\src\controllers\playercontroller.cpp
+	<controllers/PlayerController.hpp>
+	<SFML/Window/Keyboard.hpp>
+
+1391266601 d:\epic2drpg\include\controllers\playercontroller.hpp
+	<tgd/PropertyIdentifiers.hpp>
+	<tgd/Controller.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/System/Time.hpp>
+
+1391266601 source:d:\epic2drpg\src\controllers\rendercontroller.cpp
+	<controllers/RenderController.hpp>
+
+1391266601 d:\epic2drpg\include\controllers\rendercontroller.hpp
+	<tgd/Entity.hpp>
+	<tgd/Property.hpp>
+	<tgd/PropertyIdentifiers.hpp>
+	<tgd/System.hpp>
+	<tgd/Controller.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<memory>
+
+1390619969 source:d:\epic2drpg\src\debugshape.cpp
+	<DebugShape.h>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1391309871 source:d:\epic2drpg\src\entities\player.cpp
+	<entities/Player.hpp>
+	<iostream>
+
+1391311699 source:d:\epic2drpg\src\gamestate.cpp
+	<GameState.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+
+1390797769 source:d:\epic2drpg\src\label.cpp
+	<Label.hpp>
+	<Utility.hpp>
+	<SFML/Graphics/RenderStates.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+
+1390797680 d:\epic2drpg\include\label.hpp
+	<Component.hpp>
+	<ResourceIdentifiers.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1390661360 source:d:\epic2drpg\src\main.cpp
+	<Application.hpp>
+	<stdexcept>
+	<iostream>
+
+1390619969 source:d:\epic2drpg\src\maplayer.cpp
+	<tmx/MapLayer.h>
+
+1390619969 source:d:\epic2drpg\src\maploaderprivate.cpp
+	<tmx/MapLoader.h>
+	<sstream>
+	<zlib.h>
+	<cstring>
+
+1390620881 d:\epic2drpg\include\zlib.h
+	"zconf.h"
+
+1390620881 d:\epic2drpg\include\zconf.h
+	<windows.h>
+	<limits.h>
+	<sys/types.h>
+	<stdarg.h>
+	<stddef.h>
+	<unistd.h>
+	<unixio.h>
+
+1390619969 source:d:\epic2drpg\src\maploaderpublic.cpp
+	<tmx/MapLoader.h>
+
+1390970409 source:d:\epic2drpg\src\mapobject.cpp
+	<tmx/MapObject.h>
+	<tmx/MapLayer.h>
+
+1390887337 source:d:\epic2drpg\src\menustate.cpp
+	<MenuState.hpp>
+	<Button.hpp>
+	<Utility.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/View.hpp>
+
+1391048741 source:d:\epic2drpg\src\pausestate.cpp
+	<PauseState.hpp>
+	<Button.hpp>
+	<Utility.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/RectangleShape.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+	<SFML/Graphics/View.hpp>
+
+1390619969 source:d:\epic2drpg\src\pugixml\pugixml.cpp
+	<pugixml/pugixml.hpp>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	<wchar.h>
+	<math.h>
+	<float.h>
+	<setjmp.h>
+	<istream>
+	<ostream>
+	<string>
+	<new>
+	<stdint.h>
+
+1390619969 source:d:\epic2drpg\src\quadtreenode.cpp
+	<tmx/QuadTreeNode.h>
+
+1390884804 source:d:\epic2drpg\src\state.cpp
+	<State.hpp>
+	<StateStack.hpp>
+
+1390885379 source:d:\epic2drpg\src\statestack.cpp
+	<StateStack.hpp>
+	<ForEach.hpp>
+	<cassert>
+
+1391266601 source:d:\epic2drpg\src\tgd\baseproperty.cpp
+	<tgd/BaseProperty.hpp>
+
+1391266601 source:d:\epic2drpg\src\tgd\controller.cpp
+	<tgd/Controller.hpp>
+
+1391266601 source:d:\epic2drpg\src\tgd\entity.cpp
+	<tgd/Entity.hpp>
+
+1391266601 source:d:\epic2drpg\src\tgd\property.cpp
+	<tgd/Property.hpp>
+
+1391312162 source:d:\epic2drpg\src\tgd\system.cpp
+	<tgd/System.hpp>
+	<iostream>
+
+1390883470 source:d:\epic2drpg\src\titlestate.cpp
+	<TitleState.hpp>
+	<Utility.hpp>
+	<ResourceHolder.hpp>
+	<SFML/Graphics/RenderWindow.hpp>
+
+1390627876 source:d:\epic2drpg\src\utility.cpp
+	<Utility.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/Text.hpp>
+
+1391309792 source:d:\epic2drpg\src\world.cpp
+	<World.hpp>
+	<entities/Player.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<iostream>
+

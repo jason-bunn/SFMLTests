@@ -3,7 +3,8 @@
 
 #include <State.hpp>
 #include <World.hpp>
-//#include <Player.hpp>
+#include <entities/Player.hpp>
+#include <tgd/System.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -18,9 +19,12 @@ public:
     virtual bool    update(sf::Time dt);
     virtual bool    handleEvent(const sf::Event& event);
 
+public:
 
 private:
     World         mWorld;
+    tgd::System   mSystem;
+
     //Player&       mPlayer;
 };
 #endif // GAMESTATE_HPP

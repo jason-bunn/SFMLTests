@@ -1,6 +1,8 @@
 #ifndef TGD_SYSTEM_HPP
 #define TGD_SYSTEM_HPP
 
+#include <ResourceHolder.hpp>
+#include <ResourceIdentifiers.hpp>
 #include <tgd/Entity.hpp>
 #include <entities/Player.hpp>
 
@@ -24,17 +26,21 @@ namespace tgd
     {
     public:
 
-                                    System();
+                                    System(TextureHolder& textures, sf::RenderTarget& target);
                                     ~System();
         template <typename T>
         void                        registerEntity(std::shared_ptr<T> entity);
         void                        update(sf::Time dt);
-        void                        draw(sf::RenderTarget& target);
+        void                        draw();
 
         template <typename T>
         void                        createEntity();
 
         std::shared_ptr<Entity>     fetchEntity(int eID);
+
+    public:
+        TextureHolder&              textureHolder;
+        sf::RenderTarget&           mTarget;
 
     private:
         void                        checkProperties(int id);
