@@ -23,6 +23,9 @@ public:
                                 World(sf::RenderTarget& outputTarget, FontHolder& fonts);
     void                        update(sf::Time dt);
     void                        draw();
+    sf::FloatRect              getWorldBounds();
+
+
 
 public:
     sf::Clock                   mClock;
@@ -30,9 +33,9 @@ public:
 private:
 
     sf::RenderTarget&           mTarget;
-    sf::View                    mWorldView;
+    //sf::View                    mWorldView;
     sf::FloatRect               mWorldBounds;
-    sf::Vector2f                mSpawnPosition;
+    //sf::Vector2f                mSpawnPosition;
 
 
 

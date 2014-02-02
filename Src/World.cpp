@@ -11,10 +11,10 @@
 World::World(sf::RenderTarget& outputTarget, FontHolder& fonts)
 : mTarget(outputTarget)
 , mFonts(fonts)
-, mWorldView(outputTarget.getDefaultView())
+//, mWorldView(outputTarget.getDefaultView())
 , mMapLoader("Media/Maps/")
 , mWorldBounds(0.0f,0.0f, 1920, 1920)
-, mSpawnPosition(mWorldView.getSize().x / 2.0f, mWorldView.getSize().y / 2.0f)
+//, mSpawnPosition(mWorldView.getSize().x / 2.0f, mWorldView.getSize().y / 2.0f)
 {
     mMapLoader.Load("TestArea.tmx");
     mClock.restart();
@@ -33,3 +33,13 @@ void World::draw()
     mTarget.draw(mMapLoader);
     //mySystem.draw(mTarget);
 }
+
+sf::FloatRect World::getWorldBounds()
+{
+    return mWorldBounds;
+}
+
+//sf::RenderTarget& World::getRenderTarget()
+//{
+ ///   return mTarget;
+//}

@@ -5,6 +5,7 @@ GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.fonts)
 , mSystem(*context.textures, *context.window)
+, mainCam(mWorld, mSystem, *context.window)
 {
 
     mSystem.createEntity<Player>();

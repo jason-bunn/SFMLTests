@@ -251,7 +251,8 @@
 	<SFML/Graphics/Vertex.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1391311533 d:\epic2drpg\include\gamestate.hpp
+1391319666 d:\epic2drpg\include\gamestate.hpp
+	<Camera.hpp>
 	<State.hpp>
 	<World.hpp>
 	<entities/Player.hpp>
@@ -259,7 +260,7 @@
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1391309766 d:\epic2drpg\include\world.hpp
+1391321198 d:\epic2drpg\include\world.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tmx/MapLoader.h>
@@ -336,7 +337,7 @@
 
 1390619968 d:\epic2drpg\include\pugixml\pugiconfig.hpp
 
-1391311892 d:\epic2drpg\include\tgd\system.hpp
+1391319582 d:\epic2drpg\include\tgd\system.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tgd/Entity.hpp>
@@ -472,7 +473,7 @@
 	<entities/Player.hpp>
 	<iostream>
 
-1391311699 source:d:\epic2drpg\src\gamestate.cpp
+1391321844 source:d:\epic2drpg\src\gamestate.cpp
 	<GameState.hpp>
 	<SFML/Graphics/RenderWindow.hpp>
 
@@ -578,7 +579,7 @@
 1391266601 source:d:\epic2drpg\src\tgd\property.cpp
 	<tgd/Property.hpp>
 
-1391312162 source:d:\epic2drpg\src\tgd\system.cpp
+1391319568 source:d:\epic2drpg\src\tgd\system.cpp
 	<tgd/System.hpp>
 	<iostream>
 
@@ -593,9 +594,21 @@
 	<SFML/Graphics/Sprite.hpp>
 	<SFML/Graphics/Text.hpp>
 
-1391309792 source:d:\epic2drpg\src\world.cpp
+1391321890 source:d:\epic2drpg\src\world.cpp
 	<World.hpp>
 	<entities/Player.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<iostream>
+
+1391321677 d:\epic2drpg\include\camera.hpp
+	<entities/Player.hpp>
+	<World.hpp>
+	<SFML/Graphics/RenderTarget.hpp>
+	<SFML/Graphics/Sprite.hpp>
+	<SFML/Graphics/View.hpp>
+	<SFML/System/Time.hpp>
+	<iostream>
+
+1391321693 source:d:\epic2drpg\src\camera.cpp
+	<Camera.hpp>
 

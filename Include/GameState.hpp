@@ -1,6 +1,7 @@
 #ifndef GAMESTATE_HPP
 #define GAMESTATE_HPP
 
+#include <Camera.hpp>
 #include <State.hpp>
 #include <World.hpp>
 #include <entities/Player.hpp>
@@ -24,7 +25,7 @@ public:
 private:
     World         mWorld;
     tgd::System   mSystem;
-
+    Camera        mainCam;
     //Player&       mPlayer;
 };
 #endif // GAMESTATE_HPP

@@ -9,6 +9,7 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 , mEntities()
 , textureHolder(textures)
 , mTarget(target)
+
 {
     //textureHolder = textures;
     //mTarget = target;

@@ -46,6 +46,7 @@
 		</Linker>
 		<Unit filename="Include/Application.hpp" />
 		<Unit filename="Include/Button.hpp" />
+		<Unit filename="Include/Camera.hpp" />
 		<Unit filename="Include/Component.hpp" />
 		<Unit filename="Include/Container.hpp" />
 		<Unit filename="Include/ForEach.hpp" />
@@ -86,6 +87,7 @@
 		<Unit filename="Include/zlib.h" />
 		<Unit filename="Src/Application.cpp" />
 		<Unit filename="Src/Button.cpp" />
+		<Unit filename="Src/Camera.cpp" />
 		<Unit filename="Src/Component.cpp" />
 		<Unit filename="Src/Container.cpp" />
 		<Unit filename="Src/DebugShape.cpp" />
