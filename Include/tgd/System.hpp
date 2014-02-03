@@ -8,7 +8,7 @@
 #include <entities/Player.hpp>
 
 #include <tgd/Controller.hpp>
-
+#include <controllers/PlayerController.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
@@ -18,6 +18,7 @@
 #include <map>
 #include <vector>
 #include <memory>
+#include <bitset>
 
 class RenderController;
 
@@ -45,12 +46,12 @@ namespace tgd
 
     private:
         void                        checkProperties(int id);
-        void                        assignControllers(int id);
+        void                        assignControllers(int id, std::bitset<32> newBits);
         template <typename T>
         void                        createFactory(int id);
 
     private:
-        std::unordered_map<int, std::vector<Controller*>> controllerMap;
+        std::unordered_map<int, std::vector<Controller>> controllerMap;
         std::map<unsigned int, std::shared_ptr<Entity>>   mEntities;
         std::vector<std::shared_ptr<Controller>>          mRenderControllers;
         unsigned int                                      mEntityCount;
@@ -58,5 +59,7 @@ namespace tgd
 
 }
 #include "System.inl"
+#include <controllers/RenderController.hpp>
+
 #endif // TGD_SYSTEM_HPP
 

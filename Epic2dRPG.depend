@@ -337,12 +337,13 @@
 
 1390619968 d:\epic2drpg\include\pugixml\pugiconfig.hpp
 
-1391319582 d:\epic2drpg\include\tgd\system.hpp
+1391398602 d:\epic2drpg\include\tgd\system.hpp
 	<ResourceHolder.hpp>
 	<ResourceIdentifiers.hpp>
 	<tgd/Entity.hpp>
 	<entities/Player.hpp>
 	<tgd/Controller.hpp>
+	<controllers/PlayerController.hpp>
 	<SFML/System/Time.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Graphics/RenderStates.hpp>
@@ -350,7 +351,9 @@
 	<map>
 	<vector>
 	<memory>
+	<bitset>
 	"System.inl"
+	<controllers/RenderController.hpp>
 
 1391266601 d:\epic2drpg\include\tgd\entity.hpp
 	<tgd/BaseProperty.hpp>
@@ -361,7 +364,7 @@
 
 1391142607 d:\epic2drpg\include\tgd\propertyidentifiers.hpp
 
-1391266601 d:\epic2drpg\include\entities\player.hpp
+1391397234 d:\epic2drpg\include\entities\player.hpp
 	<tgd/Entity.hpp>
 	<tgd/Property.hpp>
 	<tgd/PropertyIdentifiers.hpp>
@@ -371,6 +374,7 @@
 	<SFML/System/Vector2.hpp>
 	<vector>
 	<memory>
+	<bitset>
 
 1391266601 d:\epic2drpg\include\tgd\property.hpp
 	<tgd/BaseProperty.hpp>
@@ -383,7 +387,7 @@
 	<SFML/Graphics/Texture.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 
-1391266601 d:\epic2drpg\include\tgd\controller.hpp
+1391398946 d:\epic2drpg\include\tgd\controller.hpp
 	<SFML/Graphics/RenderTarget.hpp>
 
 1391149864 d:\epic2drpg\include\tgd\system.inl
@@ -609,6 +613,6 @@
 	<SFML/System/Time.hpp>
 	<iostream>
 
-1391321693 source:d:\epic2drpg\src\camera.cpp
+1391321988 source:d:\epic2drpg\src\camera.cpp
 	<Camera.hpp>
 

@@ -11,8 +11,7 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 , mTarget(target)
 
 {
-    //textureHolder = textures;
-    //mTarget = target;
+
 }
 
 tgd::System::~System()
@@ -55,12 +54,32 @@ void tgd::System::draw()
 void tgd::System::checkProperties(int id)
 {
     int propertyMask = mEntities[id]->retrieveAllProperties();
-    std::cout << "Player prop mask in System::checkProperties: " << propertyMask << std::endl;
+    std::bitset<32> newBits(propertyMask);
+    //now we need to sort through the properties to see what controllers need to be assigned
+    //convert to bitset first, then start checking property requirements
+
+    if(newBits.any())
+    {
+        assignControllers(id, newBits);
+    }
+
 }
 
-void tgd::System::assignControllers(int id)
+void tgd::System::assignControllers(int id, std::bitset<32> newBits)
 {
+    if(newBits[0] == 1 && newBits[1] == 1 && newBits[3] == 1 && newBits[4] == 1)
+    {
+        //these should be all requirements for the player controller, also includes render controller
+        //NOTE: shared or unique pointers will have to be used in the controller vector
+       // std::vector<Controller> newControllers;
 
+       // PlayerController PC(0, id);
+       // RenderController RC(1, id, *(this));
+
+       // newControllers.push_back(PC);
+       // newControllers.push_back(RC);
+       std::cout << "Player Controller and Render Controller assigned" << std::endl;
+    }
 }
 
 template <typename T>

@@ -11,7 +11,7 @@ namespace tgd
         virtual             ~Controller();
         virtual int         getID();
         virtual int         getEntityID();
-        virtual void        draw(sf::RenderTarget& target) = 0;
+        virtual void        draw(sf::RenderTarget& target);
 
     private:
         int                 mID;

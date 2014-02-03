@@ -12,6 +12,7 @@
 
 #include <vector>
 #include <memory>
+#include <bitset>
 
 class Player : public tgd::Entity
 {
