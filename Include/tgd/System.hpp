@@ -8,7 +8,6 @@
 #include <entities/Player.hpp>
 
 #include <tgd/Controller.hpp>
-#include <controllers/PlayerController.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
@@ -21,6 +20,8 @@
 #include <bitset>
 
 class RenderController;
+
+
 
 namespace tgd
 {
@@ -60,6 +61,7 @@ namespace tgd
 }
 #include "System.inl"
 #include <controllers/RenderController.hpp>
+#include <controllers/PlayerController.hpp>
 
 #endif // TGD_SYSTEM_HPP
 

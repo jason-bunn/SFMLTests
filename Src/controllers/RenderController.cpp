@@ -37,3 +37,8 @@ void RenderController::draw(sf::RenderTarget& target, sf::RenderStates states) c
     target.draw(*mBodySprite, states);
 }
 
+void RenderController::update(sf::Time dt)
+{
+
+}
+

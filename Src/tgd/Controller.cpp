@@ -27,3 +27,8 @@ void tgd::Controller::draw(sf::RenderTarget& target, sf::RenderStates states)
 
 }
 
+void tgd::Controller::update(sf::Time dt)
+{
+
+}
+

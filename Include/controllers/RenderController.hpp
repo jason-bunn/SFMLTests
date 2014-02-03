@@ -24,6 +24,7 @@ public:
 
     void            retrieveProperties(int eID, tgd::System& mSystem);
     virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
+    virtual void    update(sf::Time dt);
 
     private:
     int             mID;

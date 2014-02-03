@@ -33,8 +33,12 @@ void Player::initializeProperties()
 
     auto temp = std::make_shared<tgd::Property<sf::Sprite>>(Properties::Visible, mySprite);
 
+    sf::Vector2f tempPos(0,0);
+
+    auto pos = std::make_shared<tgd::Property<sf::Vector2f>>(Properties::Position, tempPos);
+
     mProperties.push_back(temp);
-    mProperties.push_back(std::make_shared<tgd::Property<sf::Vector2f>>(Properties::Position, sf::Vector2f(0,0)));
+    mProperties.push_back(pos);
 }
 
 std::shared_ptr<tgd::BaseProperty> Player::accessProperty(Properties::ID id)

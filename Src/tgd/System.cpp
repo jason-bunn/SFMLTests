@@ -39,7 +39,14 @@ void tgd::System::registerEntity(std::shared_ptr<Entity> entity)
 
 void tgd::System::update(sf::Time dt)
 {
-
+    //access the player entity directly and access the visible property to draw directly. for testing only
+    for(auto itr = controllerMap.begin(); itr != controllerMap.end(); ++itr)
+    {
+        for(auto iitr = itr->second.begin(); iitr != itr->second.end(); ++iitr)
+        {
+            (*iitr)->update(dt);
+        }
+    }
 }
 
 void tgd::System::draw()
@@ -76,7 +83,7 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
         //NOTE: shared or unique pointers will have to be used in the controller vector
        std::vector<std::shared_ptr<Controller>> newControllers;
 
-       auto PC = std::make_shared<PlayerController>(0, id);
+       auto PC = std::make_shared<PlayerController>(0, id, *(this));
        auto RC = std::make_shared<RenderController>(1, id, *(this));
 
        newControllers.push_back(PC);
