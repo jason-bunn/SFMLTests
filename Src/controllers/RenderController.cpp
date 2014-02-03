@@ -2,7 +2,7 @@
 
 RenderController::RenderController(int id, int eID, tgd::System& mSystem)
 : Controller(id, eID)
-, mBodySprite(nullptr)
+, mBodySprite()
 {
     retrieveProperties(eID, mSystem);
 }
@@ -28,10 +28,12 @@ void RenderController::retrieveProperties(int eID, tgd::System& system)
     tempEnt = system.fetchEntity(eID);
     auto sprPtr = std::dynamic_pointer_cast<tgd::Property<sf::Sprite>>(tempEnt->accessProperty(Properties::Visible));
     mBodySprite = sprPtr->getValue();
+
 }
 
-void RenderController::draw(sf::RenderTarget& target)
+void RenderController::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-    target.draw(*mBodySprite);
+
+    target.draw(*mBodySprite, states);
 }
 

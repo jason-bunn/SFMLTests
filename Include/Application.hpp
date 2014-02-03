@@ -19,6 +19,11 @@ class Application
                             Application();
         void                run();
 
+    public:
+        sf::RenderWindow    mWindow;
+        TextureHolder       mTextures;
+        FontHolder          mFonts;
+
     private:
         void                processInput();
         void                update(sf::Time dt);
@@ -30,9 +35,8 @@ class Application
     private:
         static const sf::Time TimePerFrame;
 
-        sf::RenderWindow    mWindow;
-        TextureHolder       mTextures;
-        FontHolder          mFonts;
+
+
         //Player              mPlayer;
 
         StateStack          mStateStack;
@@ -45,4 +49,5 @@ class Application
 
 
 };
+
 #endif // APPLICATION_HPP

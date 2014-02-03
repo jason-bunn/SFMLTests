@@ -51,9 +51,9 @@ namespace tgd
         void                        createFactory(int id);
 
     private:
-        std::unordered_map<int, std::vector<Controller>> controllerMap;
+        std::unordered_map<int, std::vector<std::shared_ptr<Controller>>> controllerMap;
         std::map<unsigned int, std::shared_ptr<Entity>>   mEntities;
-        std::vector<std::shared_ptr<Controller>>          mRenderControllers;
+        //std::vector<std::shared_ptr<Controller>>          mRenderControllers;
         unsigned int                                      mEntityCount;
     };
 

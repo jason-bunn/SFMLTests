@@ -5,6 +5,9 @@
 #include <tgd/Property.hpp>
 #include <tgd/PropertyIdentifiers.hpp>
 #include <Utility.hpp>
+#include <ResourceHolder.hpp>
+#include <ResourceIdentifiers.hpp>
+
 
 #include <SFML/Graphics/RenderTexture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -17,7 +20,7 @@
 class Player : public tgd::Entity
 {
 public:
-                            Player(int id);
+                            Player(int id, TextureHolder& textures);
                             ~Player();
     bool                    hasProperty(Properties::ID);
     int                     retrieveAllProperties();
@@ -30,7 +33,7 @@ public:
     virtual std::shared_ptr<tgd::BaseProperty>  accessProperty(Properties::ID id);
 
 private:
-
+    TextureHolder&          mTextures;
     std::vector<std::shared_ptr<tgd::BaseProperty>>   mProperties;
     bool                    mIsAlive;
     int                     mPropMask;

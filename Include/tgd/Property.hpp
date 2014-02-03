@@ -14,7 +14,7 @@ namespace tgd
         T*                       getValue();
         void                    setValue(T newValue);
         virtual Properties::ID  getID();
-    private:
+    public:
         T                       mValue;
 
     };

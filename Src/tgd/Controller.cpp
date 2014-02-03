@@ -22,3 +22,8 @@ int tgd::Controller::getEntityID()
     return mEID;
 }
 
+void tgd::Controller::draw(sf::RenderTarget& target, sf::RenderStates states)
+{
+
+}
+

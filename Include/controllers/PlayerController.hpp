@@ -20,7 +20,7 @@ public:
 
     virtual int         getID();
     virtual int         getEntityID();
-    virtual void        draw(sf::RenderTarget&);
+    virtual void        draw(sf::RenderTarget&, sf::RenderStates states) const;
 
     void                setVelocity(sf::Vector2f moveVector);
     //sf::Vector2f        getVelocity();

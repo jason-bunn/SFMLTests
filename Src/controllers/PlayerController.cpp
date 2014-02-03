@@ -21,7 +21,7 @@ void PlayerController::update(sf::Time dt)
     setVelocity(mMoveVector);
 }
 
-void PlayerController::draw(sf::RenderTarget& target)
+void PlayerController::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 
 }

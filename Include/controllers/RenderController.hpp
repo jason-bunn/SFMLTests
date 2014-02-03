@@ -8,11 +8,13 @@
 #include <tgd/Controller.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
+#include <SFML/Graphics/Drawable.hpp>
 
 #include <memory>
 
-class RenderController : public tgd::Controller
+class RenderController : public tgd::Controller, public sf::Drawable
 {
 public:
                     RenderController(int id, int eID, tgd::System& mSystem);
@@ -21,7 +23,7 @@ public:
     virtual int     getEntityID();
 
     void            retrieveProperties(int eID, tgd::System& mSystem);
-    virtual void            draw(sf::RenderTarget& target);
+    virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
     private:
     int             mID;

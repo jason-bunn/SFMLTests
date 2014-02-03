@@ -3,7 +3,7 @@
 template <typename T>
 void tgd::System::createEntity()
 {
-    std::shared_ptr<T> ent(new T(mEntityCount));
+    std::shared_ptr<T> ent(new T(mEntityCount, textureHolder));
     //T entity(mEntityCount);
     //T *entPtr = &entity;
     //registerEntity(entity);

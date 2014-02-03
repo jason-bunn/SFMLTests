@@ -2,10 +2,11 @@
 #include <iostream>
 
 
-Player::Player(int id)
+Player::Player(int id, TextureHolder& textures)
 : Entity(id)
 , mProperties()
 , mIsAlive(true)
+, mTextures(textures)
 {
     mPropMask = Properties::PC | Properties::Visible | Properties::Velocity | Properties::Position;
     std::cout << "Player propmask in constructor: " << mPropMask << std::endl;
@@ -20,16 +21,19 @@ Player::~Player()
 void Player::initializeProperties()
 {
     //setup sprite test here, should be moved later to renderer controller
-    sf::Texture playerTexture;
-    //nab texture from texture holder
+    std::cout << "Assigning player texture" << std::endl;
 
+
+    //create sprite and assign it to a property
     sf::Sprite mySprite;
-    mySprite.setTexture(playerTexture);
-    mySprite.setTextureRect(sf::IntRect(0,0,50,66));
+    mySprite.setTexture(mTextures.get(Textures::PlayerBoy));
+    mySprite.setTextureRect(sf::IntRect(0,0,50, 66));
     centerOrigin(mySprite);
-    mySprite.setPosition(50,50);
+    mySprite.setPosition(100,100);
 
-    mProperties.push_back(std::make_shared<tgd::Property<sf::Sprite>>(Properties::Visible, std::move(mySprite)));
+    auto temp = std::make_shared<tgd::Property<sf::Sprite>>(Properties::Visible, mySprite);
+
+    mProperties.push_back(temp);
     mProperties.push_back(std::make_shared<tgd::Property<sf::Vector2f>>(Properties::Position, sf::Vector2f(0,0)));
 }
 

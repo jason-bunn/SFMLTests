@@ -4,14 +4,14 @@
 
 tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 : controllerMap()
-, mRenderControllers()
+//, mRenderControllers()
 , mEntityCount(0)
 , mEntities()
 , textureHolder(textures)
 , mTarget(target)
 
 {
-
+    //textureHolder = textures;
 }
 
 tgd::System::~System()
@@ -45,9 +45,12 @@ void tgd::System::update(sf::Time dt)
 void tgd::System::draw()
 {
     //access the player entity directly and access the visible property to draw directly. for testing only
-    for(auto itr = mRenderControllers.begin(); itr != mRenderControllers.end(); ++itr)
+    for(auto itr = controllerMap.begin(); itr != controllerMap.end(); ++itr)
     {
-        (*itr)->draw(mTarget);
+        for(auto iitr = itr->second.begin(); iitr != itr->second.end(); ++iitr)
+        {
+            mTarget.draw(*(*iitr));
+        }
     }
 }
 
@@ -71,13 +74,15 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
     {
         //these should be all requirements for the player controller, also includes render controller
         //NOTE: shared or unique pointers will have to be used in the controller vector
-       // std::vector<Controller> newControllers;
+       std::vector<std::shared_ptr<Controller>> newControllers;
 
-       // PlayerController PC(0, id);
-       // RenderController RC(1, id, *(this));
+       auto PC = std::make_shared<PlayerController>(0, id);
+       auto RC = std::make_shared<RenderController>(1, id, *(this));
 
-       // newControllers.push_back(PC);
-       // newControllers.push_back(RC);
+       newControllers.push_back(PC);
+       newControllers.push_back(RC);
+
+       controllerMap.emplace(id, newControllers);
        std::cout << "Player Controller and Render Controller assigned" << std::endl;
     }
 }
