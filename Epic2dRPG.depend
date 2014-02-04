@@ -660,7 +660,7 @@
 	<controllers/PlayerController.hpp>
 	<SFML/Window/Keyboard.hpp>
 
-1391457912 source:c:\epic2drpg\src\controllers\rendercontroller.cpp
+1391549621 source:c:\epic2drpg\src\controllers\rendercontroller.cpp
 	<controllers/RenderController.hpp>
 
 1391017594 source:c:\epic2drpg\src\debugshape.cpp
@@ -1190,7 +1190,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<memory>
 
-1391459093 c:\epic2drpg\include\controllers\playercontroller.hpp
+1391550236 c:\epic2drpg\include\controllers\playercontroller.hpp
 	<tgd/Entity.hpp>
 	<tgd/PropertyIdentifiers.hpp>
 	<tgd/Controller.hpp>
@@ -1253,4 +1253,7 @@
 	<stddef.h>
 	<unistd.h>
 	<unixio.h>
+
+1391547651 source:c:\epic2drpg\src\camera.cpp
+	<Camera.hpp>
 

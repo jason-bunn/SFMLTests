@@ -38,5 +38,6 @@ public:
     sf::Vector2f        mMoveVector;
     sf::Sprite*         mSprite;
 
+
 };
 #endif // CONTROLLERS_PLAYERCONTROLLER_HPP

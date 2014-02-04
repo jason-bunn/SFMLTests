@@ -5,6 +5,7 @@ PlayerController::PlayerController(int id, int eID, tgd::System& mSystem)
 : Controller(id, eID)
 , mMoveVector()
 , mSprite(nullptr)
+
 {
     retrieveProperties(eID, mSystem);
     mMoveVector = sf::Vector2f(0,0);
@@ -32,25 +33,37 @@ void PlayerController::handleRealtimeInput()
 {
     mMoveVector = sf::Vector2f(0,0);
 
+
+
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
         mMoveVector.y += -5;
+        //temp sprite change code
+        mSprite->setTextureRect(sf::IntRect(300,0,50, 66));
+
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
 
         mMoveVector.y += 5;
+        mSprite->setTextureRect(sf::IntRect(200,0,50, 66));
+
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
 
         mMoveVector.x += 5;
+        mSprite->setTextureRect(sf::IntRect(100,0,50, 66));
+
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
 
         mMoveVector.x += -5;
+        mSprite->setTextureRect(sf::IntRect(0,0,50, 66));
+
     }
+
 }
 
 int PlayerController::getRequirements()
