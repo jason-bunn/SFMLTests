@@ -9,6 +9,9 @@ Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target)
 , mSystem(system)
 , mOutputTarget(target)
 , mTargetSet(false)
+, mVLimit(192.0f)
+, mHLimit(256.0f)
+, mNewCenter(0,0)
 {
 
     start();
@@ -55,9 +58,45 @@ void Camera::update(sf::Time dt)
 {
     if(mTargetSet)
     {
+        mNewCenter = sf::Vector2f(0,0);
 
-        //mWorldView.setCenter(mPlayerSprite->getPosition());
-        mWorldView.setCenter(mPlayerSprite->getPosition());
+
+        if(mPlayerSprite->getPosition().x > mWorldView.getCenter().x + mHLimit)
+        {
+            mNewCenter.x = 5;
+        }
+
+        if(mPlayerSprite->getPosition().x < mWorldView.getCenter().x - mHLimit)
+        {
+            mNewCenter.x = -5;
+        }
+        if(mPlayerSprite->getPosition().y > mWorldView.getCenter().y + mVLimit)
+        {
+            mNewCenter.y = 5;
+        }
+        if(mPlayerSprite->getPosition().y < mWorldView.getCenter().y - mVLimit)
+        {
+            mNewCenter.y = -5;
+        }
+
+        //check to see that the view doesn't go out of bounds
+        sf::Vector2f viewCenter = mWorldView.getCenter();
+        if(viewCenter.x - (mHLimit * 2) + mNewCenter.x <= mWorldBounds.left
+           || viewCenter.x + (mHLimit * 2) + mNewCenter.x >= mWorldBounds.width)
+        {
+            mNewCenter.x = 0;
+
+        }
+        if(viewCenter.y - (mVLimit *2) + mNewCenter.y <= mWorldBounds.top
+           || viewCenter.y + (mVLimit *2) + mNewCenter.y >= mWorldBounds.height)
+        {
+            mNewCenter.y = 0;
+        }
+
+        //finally move the view
+         mWorldView.move(mNewCenter);
+
+
 
     }
 

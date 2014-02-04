@@ -33,6 +33,9 @@ private:
     sf::View                mWorldView;
     sf::RenderTarget&       mOutputTarget;
     bool                    mTargetSet;
+    float                   mVLimit;
+    float                   mHLimit;
+    sf::Vector2f            mNewCenter;
 };
 
 
