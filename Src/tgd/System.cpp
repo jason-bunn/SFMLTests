@@ -9,6 +9,8 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 , mEntities()
 , textureHolder(textures)
 , mTarget(target)
+, mEntityTags()
+, mPlayerCreated(false)
 
 {
     //textureHolder = textures;
@@ -91,6 +93,11 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
 
        controllerMap.emplace(id, newControllers);
        std::cout << "Player Controller and Render Controller assigned" << std::endl;
+
+       mEntityTags.insert(std::pair<unsigned int, std::string>(id, "Player"));
+       mPlayerCreated = true;
+
+       //std::cout << "string at first entry " << mEntityTags[id] << std::endl;
     }
 }
 
@@ -104,5 +111,25 @@ std::shared_ptr<tgd::Entity> tgd::System::fetchEntity(int eID)
 {
     return mEntities[eID];
 }
+
+std::shared_ptr<tgd::Entity> tgd::System::findEntityByName(std::string tag)
+{
+    for(auto itr = mEntityTags.begin(); itr != mEntityTags.end(); ++ itr)
+    {
+        if(itr->second.compare(tag) == 0)
+        {
+            return mEntities[itr->first];
+        }
+
+    }
+
+    return nullptr;
+}
+
+bool tgd::System::isPlayerCreated()
+{
+    return mPlayerCreated;
+}
+
 
 

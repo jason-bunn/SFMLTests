@@ -20,8 +20,10 @@ public:
     void                    setWorldPointer(World& world);
     void                    setPlayerPointer();
     void                    update(sf::Time dt);
+    void                    draw();
 
     void                    start();
+    bool                    isTargetSet();
 
 private:
     World&                  mWorld;
@@ -30,5 +32,8 @@ private:
     sf::FloatRect          mWorldBounds;
     sf::View                mWorldView;
     sf::RenderTarget&       mOutputTarget;
+    bool                    mTargetSet;
 };
+
+
 #endif // CAMERA_HPP

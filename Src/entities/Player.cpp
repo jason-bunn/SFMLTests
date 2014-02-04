@@ -29,7 +29,7 @@ void Player::initializeProperties()
     mySprite.setTexture(mTextures.get(Textures::PlayerBoy));
     mySprite.setTextureRect(sf::IntRect(0,0,50, 66));
     centerOrigin(mySprite);
-    mySprite.setPosition(100,100);
+    mySprite.setPosition(512,384);
 
     auto temp = std::make_shared<tgd::Property<sf::Sprite>>(Properties::Visible, mySprite);
 

@@ -107,6 +107,8 @@ void Application::render()
     //set the view of the main window
     mWindow.setView(mWindow.getDefaultView());
 
+
+
     mWindow.draw(mStatisticsText);
 
     mWindow.display();

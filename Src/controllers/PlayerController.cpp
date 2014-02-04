@@ -62,7 +62,7 @@ int PlayerController::getRequirements()
 
 void PlayerController::retrieveProperties(int eID, tgd::System& system)
 {
-std::shared_ptr<tgd::Entity> tempEnt;
+    std::shared_ptr<tgd::Entity> tempEnt;
     tempEnt = system.fetchEntity(eID);
     auto sprPtr = std::dynamic_pointer_cast<tgd::Property<sf::Sprite>>(tempEnt->accessProperty(Properties::Visible));
     mSprite = sprPtr->getValue();

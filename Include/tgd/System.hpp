@@ -13,14 +13,17 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
+
+
 #include <unordered_map>
 #include <map>
 #include <vector>
 #include <memory>
 #include <bitset>
+#include <string>
 
 class RenderController;
-
+class Camera;
 
 
 namespace tgd
@@ -38,8 +41,11 @@ namespace tgd
 
         template <typename T>
         void                        createEntity();
+        bool                        isPlayerCreated();
+
 
         std::shared_ptr<Entity>     fetchEntity(int eID);
+        std::shared_ptr<Entity>                findEntityByName(std::string tag);
 
     public:
         TextureHolder&              textureHolder;
@@ -54,14 +60,16 @@ namespace tgd
     private:
         std::unordered_map<int, std::vector<std::shared_ptr<Controller>>> controllerMap;
         std::map<unsigned int, std::shared_ptr<Entity>>   mEntities;
-        //std::vector<std::shared_ptr<Controller>>          mRenderControllers;
+        std::map<unsigned int, std::string>               mEntityTags;
         unsigned int                                      mEntityCount;
+        bool                                              mPlayerCreated;
     };
 
 }
 #include "System.inl"
 #include <controllers/RenderController.hpp>
 #include <controllers/PlayerController.hpp>
+
 
 #endif // TGD_SYSTEM_HPP
 

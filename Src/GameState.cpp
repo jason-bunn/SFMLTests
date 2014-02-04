@@ -9,10 +9,13 @@ GameState::GameState(StateStack& stack, Context context)
 {
 
     mSystem.createEntity<Player>();
+
+
 }
 
 void GameState::draw()
 {
+    mainCam.draw();
     mWorld.draw();
     mSystem.draw();
 }
@@ -21,6 +24,12 @@ bool GameState::update(sf::Time dt)
 {
     mWorld.update(dt);
     mSystem.update(dt);
+    mainCam.update(dt);
+
+    if(mSystem.isPlayerCreated() && !mainCam.isTargetSet())
+    {
+        mainCam.setPlayerPointer();
+    }
     //CommandQueue& commands = mScene.getCommandQueue();
     //mPlayer.handleRealtimeInput(commands);
 
