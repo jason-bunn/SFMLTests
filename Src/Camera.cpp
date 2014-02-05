@@ -63,20 +63,20 @@ void Camera::update(sf::Time dt)
 
         if(mPlayerSprite->getPosition().x > mWorldView.getCenter().x + mHLimit)
         {
-            mNewCenter.x = 5;
+            mNewCenter.x = 200;
         }
 
         if(mPlayerSprite->getPosition().x < mWorldView.getCenter().x - mHLimit)
         {
-            mNewCenter.x = -5;
+            mNewCenter.x = -200;
         }
         if(mPlayerSprite->getPosition().y > mWorldView.getCenter().y + mVLimit)
         {
-            mNewCenter.y = 5;
+            mNewCenter.y = 200;
         }
         if(mPlayerSprite->getPosition().y < mWorldView.getCenter().y - mVLimit)
         {
-            mNewCenter.y = -5;
+            mNewCenter.y = -200;
         }
 
         //check to see that the view doesn't go out of bounds
@@ -92,6 +92,8 @@ void Camera::update(sf::Time dt)
         {
             mNewCenter.y = 0;
         }
+
+        mNewCenter *= dt.asSeconds();
 
         //finally move the view
          mWorldView.move(mNewCenter);

@@ -31,7 +31,7 @@ public:
 
     virtual void        draw(sf::RenderTarget&, sf::RenderStates states) const;
 
-    void                setVelocity(sf::Vector2f moveVector);
+    void                setVelocity(sf::Vector2f moveVector, sf::Time dt);
     //sf::Vector2f        getVelocity();
 
     private:

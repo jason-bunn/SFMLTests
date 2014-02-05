@@ -21,7 +21,7 @@ void PlayerController::update(sf::Time dt)
 
     handleRealtimeInput();
 
-    setVelocity(mMoveVector);
+    setVelocity(mMoveVector, dt);
 }
 
 void PlayerController::draw(sf::RenderTarget& target, sf::RenderStates states) const
@@ -37,30 +37,30 @@ void PlayerController::handleRealtimeInput()
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
-        mMoveVector.y += -5;
+        mMoveVector.y += -200;
         //temp sprite change code
-        mSprite->setTextureRect(sf::IntRect(300,0,50, 66));
+
 
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
 
-        mMoveVector.y += 5;
-        mSprite->setTextureRect(sf::IntRect(200,0,50, 66));
+        mMoveVector.y += 200;
+
 
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
 
-        mMoveVector.x += 5;
-        mSprite->setTextureRect(sf::IntRect(100,0,50, 66));
+        mMoveVector.x += 200;
+
 
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
 
-        mMoveVector.x += -5;
-        mSprite->setTextureRect(sf::IntRect(0,0,50, 66));
+        mMoveVector.x += -200;
+
 
     }
 
@@ -91,9 +91,9 @@ int PlayerController::getEntityID()
     return Controller::getEntityID();
 }
 
-void PlayerController::setVelocity(sf::Vector2f moveVector)
+void PlayerController::setVelocity(sf::Vector2f moveVector, sf::Time dt)
 {
 
-    mSprite->move(moveVector);
+    mSprite->move(moveVector * dt.asSeconds());
 
 }
