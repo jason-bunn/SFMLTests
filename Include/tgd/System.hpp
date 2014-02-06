@@ -7,6 +7,7 @@
 #include <tgd/Entity.hpp>
 #include <entities/Player.hpp>
 
+#include <events/EventRouter.hpp>
 #include <tgd/Controller.hpp>
 
 #include <SFML/System/Time.hpp>
@@ -32,7 +33,7 @@ namespace tgd
     {
     public:
 
-                                    System(TextureHolder& textures, sf::RenderTarget& target);
+                                    System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter);
                                     ~System();
         template <typename T>
         void                        registerEntity(std::shared_ptr<T> entity);
@@ -63,6 +64,7 @@ namespace tgd
         std::map<unsigned int, std::string>               mEntityTags;
         unsigned int                                      mEntityCount;
         bool                                              mPlayerCreated;
+        Events::EventRouter*                              mEventRouter;
     };
 
 }

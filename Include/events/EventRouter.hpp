@@ -15,15 +15,17 @@ namespace Events
     class EventRouter : public IEventBus
     {
     public:
+        typedef std::function<void(void)>   DesiredEvent;
+
                             EventRouter();
-        virtual void        Register(std::string id, IReceiver* receiver);
-        virtual void        UnRegister(std::string id, IReceiver* receiver);
-        virtual void        UnRegister(IReceiver* receiver);
-        virtual void        Broadcast(std::string id, Event* e);
+        virtual void        Register(std::string id, DesiredEvent desiredEvent);
+        //virtual void        UnRegister(std::string id, DesiredEvent desiredEvent);
+        //virtual void        UnRegister(DesiredEvent desiredEvent);
+        virtual void        Broadcast(std::string id);
         virtual             ~EventRouter();
 
     public:
-        std::unordered_map<size_t, std::vector<IReceiver*>> mRegisteredReceivers;
+        std::unordered_map<size_t, std::vector<DesiredEvent>> mRegisteredReceivers;
     };
 }
 #endif // EVENTS_EVENTROUTER_HPP

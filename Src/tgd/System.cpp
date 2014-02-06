@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
+tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter)
 : controllerMap()
 //, mRenderControllers()
 , mEntityCount(0)
@@ -11,6 +11,7 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target)
 , mTarget(target)
 , mEntityTags()
 , mPlayerCreated(false)
+, mEventRouter(eventRouter)
 
 {
     //textureHolder = textures;

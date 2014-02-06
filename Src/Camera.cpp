@@ -1,7 +1,7 @@
 
 #include <Camera.hpp>
 
-Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target)
+Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target, Events::EventRouter* eventRouter)
 : mWorld(world)
 , mWorldBounds()
 , mWorldView(target.getDefaultView())
@@ -12,6 +12,7 @@ Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target)
 , mVLimit(192.0f)
 , mHLimit(256.0f)
 , mNewCenter(0,0)
+, mEventRouter(eventRouter)
 {
 
     start();
@@ -24,6 +25,8 @@ Camera::~Camera()
 
 void Camera::start()
 {
+
+    registerListeners();
 
     mWorldBounds = mWorld.getWorldBounds();
     std::cout << mWorldBounds.width << " " << mWorldBounds.height << std::endl;
@@ -112,4 +115,11 @@ void Camera::draw()
 bool Camera::isTargetSet()
 {
     return mTargetSet;
+}
+
+void Camera::registerListeners()
+{
+    mEventRouter->Register("playerCreated", [this] () {
+                            this->setPlayerPointer();
+                           });
 }

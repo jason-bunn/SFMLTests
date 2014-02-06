@@ -6,9 +6,12 @@
 #include <World.hpp>
 #include <entities/Player.hpp>
 #include <tgd/System.hpp>
+#include <events/EventRouter.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
+
+
 
 class GameState : public State
 {
@@ -23,9 +26,11 @@ public:
 public:
 
 private:
-    World         mWorld;
-    tgd::System   mSystem;
-    Camera        mainCam;
+
+    World                   mWorld;
+    tgd::System             mSystem;
+    Camera                  mainCam;
+
     //Player&       mPlayer;
 };
 #endif // GAMESTATE_HPP

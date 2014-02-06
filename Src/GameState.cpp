@@ -1,14 +1,19 @@
 #include <GameState.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
+Events::EventRouter mainRouter;
+Events::EventRouter* routerPtr = &mainRouter;
+
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
-, mWorld(*context.window, *context.fonts)
-, mSystem(*context.textures, *context.window)
-, mainCam(mWorld, mSystem, *context.window)
+, mWorld(*context.window, *context.fonts, routerPtr)
+, mSystem(*context.textures, *context.window, routerPtr)
+, mainCam(mWorld, mSystem, *context.window, routerPtr)
+
 {
 
     mSystem.createEntity<Player>();
+    routerPtr->Broadcast("playerCreated");
 
 
 }
@@ -26,10 +31,7 @@ bool GameState::update(sf::Time dt)
     mSystem.update(dt);
     mainCam.update(dt);
 
-    if(mSystem.isPlayerCreated() && !mainCam.isTargetSet())
-    {
-        mainCam.setPlayerPointer();
-    }
+
     //CommandQueue& commands = mScene.getCommandQueue();
     //mPlayer.handleRealtimeInput(commands);
 
