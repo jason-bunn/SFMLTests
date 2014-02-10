@@ -20,9 +20,11 @@ GameState::GameState(StateStack& stack, Context context)
 
 void GameState::draw()
 {
+
     mainCam.draw();
-    mWorld.draw();
+
     mSystem.draw();
+    mWorld.draw();
 }
 
 bool GameState::update(sf::Time dt)
@@ -51,4 +53,9 @@ bool GameState::handleEvent(const sf::Event& event)
     }
 
     return true;
+}
+
+void GameState::clearGameState()
+{
+
 }

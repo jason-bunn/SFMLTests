@@ -31,6 +31,7 @@ public:
 
 public:
     sf::Clock                   mClock;
+    tmx::MapLoader              mMapLoader;
 
 private:
 
@@ -39,7 +40,7 @@ private:
     sf::FloatRect               mWorldBounds;
     //sf::Vector2f                mSpawnPosition;
     FontHolder&                 mFonts;
-    tmx::MapLoader              mMapLoader;
+
     Events::EventRouter*        mEventRouter;
 
 };

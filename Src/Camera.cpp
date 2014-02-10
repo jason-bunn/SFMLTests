@@ -84,14 +84,14 @@ void Camera::update(sf::Time dt)
 
         //check to see that the view doesn't go out of bounds
         sf::Vector2f viewCenter = mWorldView.getCenter();
-        if(viewCenter.x - (mHLimit * 2) + mNewCenter.x <= mWorldBounds.left
-           || viewCenter.x + (mHLimit * 2) + mNewCenter.x >= mWorldBounds.width)
+        if(viewCenter.x - (mHLimit * 1.5f) + mNewCenter.x <= mWorldBounds.left
+           || viewCenter.x + (mHLimit * 1.5f) + mNewCenter.x >= mWorldBounds.width)
         {
             mNewCenter.x = 0;
 
         }
-        if(viewCenter.y - (mVLimit *2) + mNewCenter.y <= mWorldBounds.top
-           || viewCenter.y + (mVLimit *2) + mNewCenter.y >= mWorldBounds.height)
+        if(viewCenter.y - (mVLimit * 1.5f) + mNewCenter.y <= mWorldBounds.top
+           || viewCenter.y + (mVLimit * 1.5f) + mNewCenter.y >= mWorldBounds.height)
         {
             mNewCenter.y = 0;
         }
@@ -110,6 +110,8 @@ void Camera::update(sf::Time dt)
 void Camera::draw()
 {
     mOutputTarget.setView(mWorldView);
+    mWorld.mMapLoader.Draw(mOutputTarget, 0);
+    mWorld.mMapLoader.Draw(mOutputTarget, 1);
 }
 
 bool Camera::isTargetSet()

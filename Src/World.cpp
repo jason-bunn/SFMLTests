@@ -31,7 +31,7 @@ void World::update(sf::Time dt)
 
 void World::draw()
 {
-    mTarget.draw(mMapLoader);
+    mMapLoader.Draw(mTarget, 2);
     //mySystem.draw(mTarget);
 }
 

@@ -10,7 +10,7 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
-
+#include <SFML/Graphics/RenderTarget.hpp>
 
 
 class GameState : public State
@@ -22,6 +22,7 @@ public:
     virtual void    draw();
     virtual bool    update(sf::Time dt);
     virtual bool    handleEvent(const sf::Event& event);
+    void            clearGameState();
 
 public:
 
