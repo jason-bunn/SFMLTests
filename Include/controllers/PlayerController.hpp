@@ -5,7 +5,7 @@
 #include <tgd/PropertyIdentifiers.hpp>
 #include <tgd/Controller.hpp>
 #include <tgd/System.hpp>
-
+#include <tmx/MapObject.h>
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Sprite.hpp>
@@ -18,7 +18,7 @@
 class PlayerController : public tgd::Controller
 {
 public:
-                        PlayerController(int id, int eID, tgd::System& mSystem);
+                        PlayerController(int id, int eID, tgd::System& mSystem, tmx::MapLoader* mapLoader);
                         ~PlayerController();
 
     void                update(sf::Time dt);
@@ -32,12 +32,15 @@ public:
     virtual void        draw(sf::RenderTarget&, sf::RenderStates states) const;
 
     void                setVelocity(sf::Vector2f moveVector, sf::Time dt);
-    //sf::Vector2f        getVelocity();
+    int                 checkCollisions();
 
-    private:
+public:
+    sf::Vector2f        collisionPoints[4] {}; //represents four corners of sprite
+
+private:
     sf::Vector2f        mMoveVector;
     sf::Sprite*         mSprite;
-
-
+    tmx::MapLoader*     mMapPtr;
+    int                 mColFlag;
 };
 #endif // CONTROLLERS_PLAYERCONTROLLER_HPP

@@ -7,7 +7,7 @@ Events::EventRouter* routerPtr = &mainRouter;
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.fonts, routerPtr)
-, mSystem(*context.textures, *context.window, routerPtr)
+, mSystem(*context.textures, *context.window, routerPtr, &mWorld.mMapLoader)
 , mainCam(mWorld, mSystem, *context.window, routerPtr)
 
 {
@@ -20,19 +20,23 @@ GameState::GameState(StateStack& stack, Context context)
 
 void GameState::draw()
 {
-
+    //camera draws background layers
     mainCam.draw();
 
+    //system draws entities
     mSystem.draw();
+    //world draws top layers
     mWorld.draw();
 }
 
 bool GameState::update(sf::Time dt)
 {
-    mWorld.update(dt);
-    mSystem.update(dt);
+    //camera queries map quadtree for map collisions
     mainCam.update(dt);
 
+    mSystem.update(dt);
+
+    mWorld.update(dt);
 
     //CommandQueue& commands = mScene.getCommandQueue();
     //mPlayer.handleRealtimeInput(commands);

@@ -9,7 +9,7 @@
 
 #include <events/EventRouter.hpp>
 #include <tgd/Controller.hpp>
-
+#include <tmx/MapLoader.h>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
@@ -33,7 +33,7 @@ namespace tgd
     {
     public:
 
-                                    System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter);
+                                    System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter, tmx::MapLoader* mMapLoader);
                                     ~System();
         template <typename T>
         void                        registerEntity(std::shared_ptr<T> entity);
@@ -65,6 +65,7 @@ namespace tgd
         unsigned int                                      mEntityCount;
         bool                                              mPlayerCreated;
         Events::EventRouter*                              mEventRouter;
+        tmx::MapLoader*                                   mMapPtr;
     };
 
 }

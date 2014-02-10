@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter)
+tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::EventRouter* eventRouter, tmx::MapLoader* mapLoader)
 : controllerMap()
 //, mRenderControllers()
 , mEntityCount(0)
@@ -12,14 +12,15 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
 , mEntityTags()
 , mPlayerCreated(false)
 , mEventRouter(eventRouter)
-
+, mMapPtr(mapLoader)
 {
     //textureHolder = textures;
 }
 
 tgd::System::~System()
 {
-
+    delete mMapPtr;
+    delete mEventRouter;
 }
 
 /*template <typename T>
@@ -86,7 +87,7 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
         //NOTE: shared or unique pointers will have to be used in the controller vector
        std::vector<std::shared_ptr<Controller>> newControllers;
 
-       auto PC = std::make_shared<PlayerController>(0, id, *(this));
+       auto PC = std::make_shared<PlayerController>(0, id, *(this), mMapPtr);
        auto RC = std::make_shared<RenderController>(1, id, *(this));
 
        newControllers.push_back(PC);

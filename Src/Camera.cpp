@@ -15,6 +15,7 @@ Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target, Even
 , mEventRouter(eventRouter)
 {
 
+
     start();
 }
 
@@ -29,7 +30,7 @@ void Camera::start()
     registerListeners();
 
     mWorldBounds = mWorld.getWorldBounds();
-    std::cout << mWorldBounds.width << " " << mWorldBounds.height << std::endl;
+    //std::cout << mWorldBounds.width << " " << mWorldBounds.height << std::endl;
     //setPlayerPointer();
 
 }
@@ -61,6 +62,9 @@ void Camera::update(sf::Time dt)
 {
     if(mTargetSet)
     {
+
+
+
         mNewCenter = sf::Vector2f(0,0);
 
 
@@ -102,7 +106,11 @@ void Camera::update(sf::Time dt)
          mWorldView.move(mNewCenter);
 
 
-
+        //mWorld.mMapLoader.UpdateQuadTree(mWorldView.getViewport());
+        mWorld.mMapLoader.UpdateQuadTree(sf::FloatRect(mWorldView.getCenter().x - mWorldView.getSize().x * 0.5f,
+                                                       mWorldView.getCenter().y - mWorldView.getSize().y * 0.5f,
+                                                       mWorldView.getSize().x ,
+                                                       mWorldView.getSize().y ));
     }
 
 }
@@ -112,6 +120,7 @@ void Camera::draw()
     mOutputTarget.setView(mWorldView);
     mWorld.mMapLoader.Draw(mOutputTarget, 0);
     mWorld.mMapLoader.Draw(mOutputTarget, 1);
+    mWorld.mMapLoader.Draw(mOutputTarget, tmx::MapLayer::Debug);
 }
 
 bool Camera::isTargetSet()
