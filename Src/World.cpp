@@ -41,7 +41,8 @@ sf::FloatRect World::getWorldBounds()
     return mWorldBounds;
 }
 
-//sf::RenderTarget& World::getRenderTarget()
-//{
- ///   return mTarget;
-//}
+void World::cleanup()
+{
+    std::cout << "Cleaning up World" << std::endl;
+
+}

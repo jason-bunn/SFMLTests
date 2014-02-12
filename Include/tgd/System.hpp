@@ -46,7 +46,9 @@ namespace tgd
 
 
         std::shared_ptr<Entity>     fetchEntity(int eID);
-        std::shared_ptr<Entity>                findEntityByName(std::string tag);
+        std::shared_ptr<Entity>     findEntityByName(std::string tag);
+
+        void                        cleanup();
 
     public:
         TextureHolder&              textureHolder;

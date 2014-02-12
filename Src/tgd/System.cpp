@@ -133,5 +133,9 @@ bool tgd::System::isPlayerCreated()
     return mPlayerCreated;
 }
 
+void tgd::System::cleanup()
+{
+
+}
 
 

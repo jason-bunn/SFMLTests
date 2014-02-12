@@ -27,7 +27,7 @@ public:
     void                        draw();
     sf::FloatRect              getWorldBounds();
 
-
+    void                        cleanup();
 
 public:
     sf::Clock                   mClock;

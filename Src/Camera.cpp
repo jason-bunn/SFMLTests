@@ -105,12 +105,12 @@ void Camera::update(sf::Time dt)
         //finally move the view
          mWorldView.move(mNewCenter);
 
-
+        sf::Vector2f viewSize(mWorldView.getSize());
         //mWorld.mMapLoader.UpdateQuadTree(mWorldView.getViewport());
-        mWorld.mMapLoader.UpdateQuadTree(sf::FloatRect(mWorldView.getCenter().x - mWorldView.getSize().x * 0.5f,
-                                                       mWorldView.getCenter().y - mWorldView.getSize().y * 0.5f,
-                                                       mWorldView.getSize().x ,
-                                                       mWorldView.getSize().y ));
+        mWorld.mMapLoader.UpdateQuadTree(sf::FloatRect(mWorldView.getCenter().x - viewSize.x * 0.5f,
+                                                       mWorldView.getCenter().y - viewSize.y * 0.5f,
+                                                       viewSize.x ,
+                                                       viewSize.y ));
     }
 
 }

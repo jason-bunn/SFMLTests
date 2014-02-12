@@ -36,6 +36,7 @@ PauseState::PauseState(StateStack& stack, Context context)
     backToMenuButton->setCallBack([this] ()
                                   {
                                       //need to add some functionality here to reset or clear game state.
+                                      GameState::clearGameState();
                                       requestStateClear();
                                       requestStackPush(States::Menu);
                                   });
