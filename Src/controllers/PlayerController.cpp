@@ -12,10 +12,14 @@ PlayerController::PlayerController(int id, int eID, tgd::System& mSystem, tmx::M
     mMoveVector = sf::Vector2f(0,0);
 
     //setup collision points
-    collisionPoints[0] = sf::Vector2f(-30, -30); //top left
-    collisionPoints[1] = sf::Vector2f( 30, -30); //top right
-    collisionPoints[2] = sf::Vector2f(-30,  30); //bottom left
-    collisionPoints[3] = sf::Vector2f( 30,  30); //bottom right
+    collisionPoints[0] = sf::Vector2f(-25, -32); //top left
+    collisionPoints[1] = sf::Vector2f( 25, -32); //top right
+    collisionPoints[2] = sf::Vector2f(-25,  32); //bottom left
+    collisionPoints[3] = sf::Vector2f( 25,  32); //bottom right
+    collisionPoints[4] = sf::Vector2f( 32, -25); //right top
+    collisionPoints[5] = sf::Vector2f( 32,  25); //right bottom
+    collisionPoints[6] = sf::Vector2f( -32, -25); //left top
+    collisionPoints[7] = sf::Vector2f( -32,  25); //left bottom
 }
 
 PlayerController::~PlayerController()
@@ -49,7 +53,7 @@ void PlayerController::handleRealtimeInput()
 
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W))
     {
-        if(mColFlag != 0 && mColFlag != 1)
+        if(mColFlag[0] != 1 && mColFlag[1] != 1)
         {
             mMoveVector.y += -200;
         }
@@ -60,7 +64,7 @@ void PlayerController::handleRealtimeInput()
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S))
     {
-        if(mColFlag != 2 && mColFlag != 3)
+        if(mColFlag[2] != 1 && mColFlag[3] != 1)
         {
             mMoveVector.y += 200;
         }
@@ -70,16 +74,18 @@ void PlayerController::handleRealtimeInput()
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D))
     {
-        if(mColFlag != 1 && mColFlag != 3)
+        if(mColFlag[4] != 1 && mColFlag[5] !=1 )
         {
+
             mMoveVector.x += 200;
         }
+
 
 
     }
     else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
     {
-        if(mColFlag != 0 && mColFlag != 2)
+        if(mColFlag[6] != 1 && mColFlag[7] != 1)
         {
             mMoveVector.x += -200;
         }
@@ -90,24 +96,26 @@ void PlayerController::handleRealtimeInput()
 
 }
 
-int PlayerController::checkCollisions()
+std::bitset<8> PlayerController::checkCollisions()
 {
+    std::bitset<8> bitMask(std::string("0000"));
     //this currently only checks collisions with the map
     std::vector<tmx::MapObject*> objects = mMapPtr->QueryQuadTree(mSprite->getGlobalBounds());
     //std::cout << "Objects on screen: " << objects.size() << std::endl;
     for(int i = 0; i<objects.size(); i++)
     {
-        for(int j = 0; j<4; j++)
+        for(int j = 0; j<8; j++)
         {
             if(objects[i]->Contains(mSprite->getPosition() + collisionPoints[j]))
             {
                 //std::cout<<"Collision Detected" << std::endl;
-                return j;
-                break;
+                bitMask[j] = 1;
+
             }
         }
     }
-    return -1;
+
+    return bitMask;
 }
 
 int PlayerController::getRequirements()

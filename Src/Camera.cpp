@@ -120,7 +120,7 @@ void Camera::draw()
     mOutputTarget.setView(mWorldView);
     mWorld.mMapLoader.Draw(mOutputTarget, 0);
     mWorld.mMapLoader.Draw(mOutputTarget, 1);
-    mWorld.mMapLoader.Draw(mOutputTarget, tmx::MapLayer::Debug);
+    //mWorld.mMapLoader.Draw(mOutputTarget, tmx::MapLayer::Debug);
 }
 
 bool Camera::isTargetSet()

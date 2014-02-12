@@ -32,15 +32,15 @@ public:
     virtual void        draw(sf::RenderTarget&, sf::RenderStates states) const;
 
     void                setVelocity(sf::Vector2f moveVector, sf::Time dt);
-    int                 checkCollisions();
+    std::bitset<8>         checkCollisions();
 
 public:
-    sf::Vector2f        collisionPoints[4] {}; //represents four corners of sprite
+    sf::Vector2f        collisionPoints[8] {}; //represents four corners of sprite
 
 private:
     sf::Vector2f        mMoveVector;
     sf::Sprite*         mSprite;
     tmx::MapLoader*     mMapPtr;
-    int                 mColFlag;
+    std::bitset<8>         mColFlag;
 };
 #endif // CONTROLLERS_PLAYERCONTROLLER_HPP
