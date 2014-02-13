@@ -21,7 +21,7 @@ Camera::Camera(World& world, tgd::System& system, sf::RenderTarget& target, Even
 
 Camera::~Camera()
 {
-    delete mPlayerSprite;
+
 }
 
 void Camera::start()

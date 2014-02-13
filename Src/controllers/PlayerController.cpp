@@ -7,6 +7,7 @@ PlayerController::PlayerController(int id, int eID, tgd::System& mSystem, tmx::M
 , mSprite(nullptr)
 , mMapPtr(mapLoader)
 , mColFlag(-1)
+, moveDir(Down)
 {
     retrieveProperties(eID, mSystem);
     mMoveVector = sf::Vector2f(0,0);
@@ -24,8 +25,7 @@ PlayerController::PlayerController(int id, int eID, tgd::System& mSystem, tmx::M
 
 PlayerController::~PlayerController()
 {
-    delete mSprite;
-    delete mMapPtr;
+
 }
 
 void PlayerController::update(sf::Time dt)
@@ -58,7 +58,7 @@ void PlayerController::handleRealtimeInput()
             mMoveVector.y += -200;
         }
 
-        //temp sprite change code
+        moveDir = Up;
 
 
     }
@@ -68,7 +68,7 @@ void PlayerController::handleRealtimeInput()
         {
             mMoveVector.y += 200;
         }
-
+        moveDir = Down;
 
 
     }
@@ -79,7 +79,7 @@ void PlayerController::handleRealtimeInput()
 
             mMoveVector.x += 200;
         }
-
+        moveDir = Right;
 
 
     }
@@ -89,7 +89,7 @@ void PlayerController::handleRealtimeInput()
         {
             mMoveVector.x += -200;
         }
-
+        moveDir = Left;
 
 
     }

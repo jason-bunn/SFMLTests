@@ -18,7 +18,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts, Events::EventRou
 , mEventRouter(eventRouter)
 {
     mMapLoader.Load("TestArea.tmx");
-    mClock.restart();
+
 
 
     //mySystem.createEntity<Player>();

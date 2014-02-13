@@ -11,11 +11,20 @@
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/Drawable.hpp>
-
+#include <SFML/System/Clock.hpp>
 #include <memory>
 
 class RenderController : public tgd::Controller, public sf::Drawable
 {
+public:
+    enum Direction
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    };
+
 public:
                     RenderController(int id, int eID, tgd::System& mSystem);
                     ~RenderController();
@@ -26,11 +35,18 @@ public:
     virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
     virtual void    update(sf::Time dt);
 
-    private:
+public:
+
+
+private:
     int             mID;
     int             mEID;
     sf::Sprite*     mBodySprite;
-
+    sf::Vector2f    mPreviousPosition;
+    sf::Time        mFrameTimer;
+    int             mHFrame;
+    int             mVFrame;
+    Direction       mCurrentDirection;
 
 };
 #endif // CONTROLLERS_RENDERCONTROLLER_HPP

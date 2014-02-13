@@ -19,8 +19,8 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
 
 tgd::System::~System()
 {
-    delete mMapPtr;
-    delete mEventRouter;
+    //delete mMapPtr;
+    //delete mEventRouter;
 }
 
 /*template <typename T>

@@ -9,7 +9,7 @@
 #include <events/EventRouter.hpp>
 
 #include <SFML/System/Time.hpp>
-#include <SFML/System/Clock.hpp>
+
 #include <SFML/Graphics/View.hpp>
 
 
@@ -30,7 +30,7 @@ public:
     void                        cleanup();
 
 public:
-    sf::Clock                   mClock;
+
     tmx::MapLoader              mMapLoader;
 
 private:

@@ -18,6 +18,14 @@
 class PlayerController : public tgd::Controller
 {
 public:
+    enum MoveDir
+    {
+        Up,
+        Down,
+        Left,
+        Right,
+    };
+public:
                         PlayerController(int id, int eID, tgd::System& mSystem, tmx::MapLoader* mapLoader);
                         ~PlayerController();
 
@@ -36,7 +44,7 @@ public:
 
 public:
     sf::Vector2f        collisionPoints[8] {}; //represents four corners of sprite
-
+    MoveDir             moveDir;
 private:
     sf::Vector2f        mMoveVector;
     sf::Sprite*         mSprite;

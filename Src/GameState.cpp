@@ -4,6 +4,9 @@
 Events::EventRouter mainRouter;
 Events::EventRouter* routerPtr = &mainRouter;
 
+//main clock, maybe move to a separate class
+sf::Clock   mGameClock;
+
 GameState::GameState(StateStack& stack, Context context)
 : State(stack, context)
 , mWorld(*context.window, *context.fonts, routerPtr)
@@ -61,7 +64,6 @@ bool GameState::handleEvent(const sf::Event& event)
 
 void GameState::clearGameState()
 {
-    std::cout << "Clearing Game State" << std::endl;
-    //World::cleanup();
-    delete routerPtr;
+    //std::cout << "Clearing Game State" << std::endl;
+
 }
