@@ -99,7 +99,7 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
        mEntityTags.insert(std::pair<unsigned int, std::string>(id, "Player"));
        mPlayerCreated = true;
 
-       //std::cout << "string at first entry " << mEntityTags[id] << std::endl;
+       std::cout << "player created " <<  std::endl;
     }
 }
 

@@ -43,12 +43,14 @@ void Camera::setWorldPointer(World& world)
 void Camera::setPlayerPointer()
 {
     auto tempEnt = mSystem.findEntityByName("Player");
+    std::cout << "Player found by name" << std::endl;
     if(tempEnt == nullptr)
     {
         std::cout << "Entity not found" << std::endl;
     }
     else
     {
+        std::cout << "Setting sprite pointer to camera" << std::endl;
         auto sprPtr = std::dynamic_pointer_cast<tgd::Property<sf::Sprite>>(tempEnt->accessProperty(Properties::Visible));
         mPlayerSprite = sprPtr->getValue();
         mTargetSet = true;
@@ -133,4 +135,5 @@ void Camera::registerListeners()
     mEventRouter->Register("playerCreated", [this] () {
                             this->setPlayerPointer();
                            });
+    std::cout << "Camera listener registered" << std::endl;
 }

@@ -9,6 +9,7 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
+#include <iostream>
 
 namespace Events
 {
@@ -23,6 +24,7 @@ namespace Events
         //virtual void        UnRegister(DesiredEvent desiredEvent);
         virtual void        Broadcast(std::string id);
         virtual             ~EventRouter();
+        void                RemoveAllReceivers();
 
     public:
         std::unordered_map<size_t, std::vector<DesiredEvent>> mRegisteredReceivers;

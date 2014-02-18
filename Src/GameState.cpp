@@ -65,5 +65,5 @@ bool GameState::handleEvent(const sf::Event& event)
 void GameState::clearGameState()
 {
     //std::cout << "Clearing Game State" << std::endl;
-
+    mainRouter.RemoveAllReceivers();
 }
