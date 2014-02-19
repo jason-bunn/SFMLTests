@@ -23,7 +23,7 @@ public:
                             Player(int id, TextureHolder& textures);
                             ~Player();
     bool                    hasProperty(Properties::ID);
-    int                     retrieveAllProperties();
+    std::bitset<32>         retrieveAllProperties();
     int                     getEntityID();
     bool                    isAlive() const;
 
@@ -36,7 +36,7 @@ private:
     TextureHolder&          mTextures;
     std::vector<std::shared_ptr<tgd::BaseProperty>>   mProperties;
     bool                    mIsAlive;
-    int                     mPropMask;
+    std::bitset<32>         mPropMask;
 };
 
 #endif // ENTITIES_PLAYER_HPP

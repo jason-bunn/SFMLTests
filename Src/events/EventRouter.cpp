@@ -66,7 +66,7 @@ void Events::EventRouter::UnRegister(DesiredEvent desiredEvent)
 void Events::EventRouter::Broadcast(std::string id)
 {
     //this could potentially be improved by using std::function as the receiver objects, though I have no idea how
-    std::cout << "Broadcasting event" << std::endl;
+
     //use hash function to convert string to size_t
     std::hash<std::string> hash_fn;
     std::size_t str_hash = hash_fn(id);

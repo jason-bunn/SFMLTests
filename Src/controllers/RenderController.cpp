@@ -15,7 +15,7 @@ RenderController::RenderController(int id, int eID, tgd::System& mSystem)
 
 RenderController::~RenderController()
 {
-    delete mBodySprite;
+
 }
 
 int RenderController::getID()
@@ -133,6 +133,13 @@ void RenderController::update(sf::Time dt)
     }
 
 
+
+}
+
+std::bitset<8> RenderController::getRequirements()
+{
+
+    return (Properties::Position | Properties::Velocity);
 
 }
 

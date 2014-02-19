@@ -16,7 +16,7 @@ int tgd::Entity::getEntityID()
     return mID;
 }
 
-int tgd::Entity::retrieveAllProperties()
+std::bitset<32> tgd::Entity::retrieveAllProperties()
 {
 
 }

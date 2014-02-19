@@ -20,4 +20,9 @@ void tgd::System::registerEntity(std::shared_ptr<T> entity)
 
 }
 
+template <typename T>
+void tgd::System::createFactory()
+{
+
+}
 

@@ -59,7 +59,7 @@ bool Player::hasProperty(Properties::ID id)
     return false;
 }
 
-int Player::retrieveAllProperties()
+std::bitset<32> Player::retrieveAllProperties()
 {
     return mPropMask;
 }

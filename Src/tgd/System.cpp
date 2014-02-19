@@ -67,8 +67,8 @@ void tgd::System::draw()
 
 void tgd::System::checkProperties(int id)
 {
-    int propertyMask = mEntities[id]->retrieveAllProperties();
-    std::bitset<32> newBits(propertyMask);
+    //int propertyMask = mEntities[id]->retrieveAllProperties();
+    std::bitset<32> newBits(mEntities[id]->retrieveAllProperties());
     //now we need to sort through the properties to see what controllers need to be assigned
     //convert to bitset first, then start checking property requirements
 
@@ -99,15 +99,11 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
        mEntityTags.insert(std::pair<unsigned int, std::string>(id, "Player"));
        mPlayerCreated = true;
 
-       std::cout << "player created " <<  std::endl;
+
     }
 }
 
-template <typename T>
-void tgd::System::createFactory(int id)
-{
 
-}
 
 std::shared_ptr<tgd::Entity> tgd::System::fetchEntity(int eID)
 {
