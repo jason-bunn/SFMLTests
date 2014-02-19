@@ -87,7 +87,7 @@ void tgd::System::assignControllers(int id, std::bitset<32> newBits)
         //NOTE: shared or unique pointers will have to be used in the controller vector
        std::vector<std::shared_ptr<Controller>> newControllers;
 
-       auto PC = std::make_shared<PlayerController>(0, id, *(this), mMapPtr);
+       auto PC = std::make_shared<PlayerController>(0, id, *(this));
        auto RC = std::make_shared<RenderController>(1, id, *(this));
 
        newControllers.push_back(PC);

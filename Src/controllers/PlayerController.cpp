@@ -1,11 +1,11 @@
 #include <controllers/PlayerController.hpp>
 #include <SFML/Window/Keyboard.hpp>
 
-PlayerController::PlayerController(int id, int eID, tgd::System& mSystem, tmx::MapLoader* mapLoader)
+PlayerController::PlayerController(int id, int eID, tgd::System& mSystem)
 : Controller(id, eID)
 , mMoveVector()
 , mSprite(nullptr)
-, mMapPtr(mapLoader)
+, mMapPtr(mSystem.mMapPtr)
 , mColFlag(-1)
 , moveDir(Down)
 {

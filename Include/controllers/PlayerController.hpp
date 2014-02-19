@@ -26,7 +26,7 @@ public:
         Right,
     };
 public:
-                        PlayerController(int id, int eID, tgd::System& mSystem, tmx::MapLoader* mapLoader);
+                        PlayerController(int id, int eID, tgd::System& mSystem);
                         ~PlayerController();
 
     void                update(sf::Time dt);
@@ -49,6 +49,6 @@ private:
     sf::Vector2f        mMoveVector;
     sf::Sprite*         mSprite;
     tmx::MapLoader*     mMapPtr;
-    std::bitset<8>         mColFlag;
+    std::bitset<8>      mColFlag;
 };
 #endif // CONTROLLERS_PLAYERCONTROLLER_HPP

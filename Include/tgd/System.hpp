@@ -53,7 +53,7 @@ namespace tgd
     public:
         TextureHolder&              textureHolder;
         sf::RenderTarget&           mTarget;
-
+        tmx::MapLoader*             mMapPtr;
     private:
         void                        checkProperties(int id);
         void                        assignControllers(int id, std::bitset<32> newBits);
@@ -67,7 +67,7 @@ namespace tgd
         unsigned int                                      mEntityCount;
         bool                                              mPlayerCreated;
         Events::EventRouter*                              mEventRouter;
-        tmx::MapLoader*                                   mMapPtr;
+
 
     };
 
