@@ -13,6 +13,7 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
 , mPlayerCreated(false)
 , mEventRouter(eventRouter)
 , mMapPtr(mapLoader)
+, mFactories()
 {
     //textureHolder = textures;
 }

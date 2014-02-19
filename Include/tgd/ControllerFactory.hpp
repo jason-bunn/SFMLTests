@@ -1,26 +1,30 @@
 #ifndef TGD_CONTROLLERFACTORY_HPP
 #define TGD_CONTROLLERFACTORY_HPP
 
-#include <tgd/System.hpp>
+
+#include <tgd/BaseFactory.hpp>
+#include <bitset>
 namespace tgd
 {
 
+class System;
 
 template <typename T>
-class ControllerFactory
+class ControllerFactory : public BaseFactory
 {
 
 public:
-                        ControllerFactory(tgd::System* system);
+                        ControllerFactory(System* system);
                         ~ControllerFactory();
 
     void                checkProperties(int eID);
     void                assignController(int eID);
 
 private:
-    tgd::System*        mSystemPtr;
+    System*             mSystemPtr;
     std::bitset<32>     mRequirements;
+
 };
 }
-#include <tgd/ControllerFactory.inl>
+#include "ControllerFactory.inl"
 #endif // TGD_CONTROLLERFACTORY_HPP

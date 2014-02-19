@@ -9,6 +9,9 @@
 
 #include <events/EventRouter.hpp>
 #include <tgd/Controller.hpp>
+#include <tgd/BaseFactory.hpp>
+#include <tgd/ControllerFactory.hpp>
+
 #include <tmx/MapLoader.h>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
@@ -29,6 +32,8 @@ class Camera;
 
 namespace tgd
 {
+
+
     class System
     {
     public:
@@ -67,6 +72,7 @@ namespace tgd
         unsigned int                                      mEntityCount;
         bool                                              mPlayerCreated;
         Events::EventRouter*                              mEventRouter;
+        std::vector<std::unique_ptr<tgd::BaseFactory>>    mFactories;
 
 
     };
