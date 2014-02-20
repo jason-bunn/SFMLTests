@@ -25,3 +25,9 @@ void tgd::ControllerFactory<T>::assignController(int eID)
     //must have someway of getting shared pointer back to system to be placed onto controller map
 
 }
+
+template <typename T>
+std::string tgd::ControllerFactory<T>::displayRequirements()
+{
+    return (mRequirements.to_string());
+}

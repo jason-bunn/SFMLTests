@@ -9,7 +9,7 @@ Player::Player(int id, TextureHolder& textures)
 , mTextures(textures)
 {
     mPropMask = Properties::PC | Properties::Visible | Properties::Velocity | Properties::Position;
-    std::cout << "Player propmask in constructor: " << mPropMask << std::endl;
+
     initializeProperties();
 }
 

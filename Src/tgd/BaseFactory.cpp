@@ -19,3 +19,8 @@ void tgd::BaseFactory::assignController(int eID)
 {
 
 }
+
+std::string tgd::BaseFactory::displayRequirements()
+{
+
+}

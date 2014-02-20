@@ -6,6 +6,7 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
 : controllerMap()
 //, mRenderControllers()
 , mEntityCount(0)
+, mControllerCount(0)
 , mEntities()
 , textureHolder(textures)
 , mTarget(target)
@@ -18,31 +19,16 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
     //textureHolder = textures;
     createFactory<PlayerController>(this);
     createFactory<RenderController>(this);
+
+    //std::cout << mFactories[0]->displayRequirements() << std::endl;
+    //std::cout << mFactories[1]->displayRequirements() << std::endl;
 }
 
 tgd::System::~System()
 {
-    //delete mMapPtr;
-    //delete mEventRouter;
+
 }
 
-/*template <typename T>
-void tgd::System::createEntity()
-{
-    T entity = new T(mEntityCount);
-    T *entPtr = &entity;
-    registerEntity(entity);
-    mEntityCount++;m
-}
-
-void tgd::System::registerEntity(std::shared_ptr<Entity> entity)
-{
-    //at some point you might want to check for empty portions of the list (ie if an entity is destroyed)
-
-    mEntities.insert(std::pair<unsigned int, std::shared_ptr<Entity>>(mEntityCount, entity));
-    checkProperties(entity->getEntityID());
-
-}*/
 
 void tgd::System::update(sf::Time dt)
 {
@@ -137,4 +123,11 @@ void tgd::System::cleanup()
 
 }
 
+unsigned int tgd::System::assignControllerID()
+{
+    //return the current count to be used as a unique controller id and increment count
+    unsigned int temp = mControllerCount;
+    mControllerCount++;
+    return temp;
+}
 

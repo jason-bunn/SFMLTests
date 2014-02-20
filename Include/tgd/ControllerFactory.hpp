@@ -19,7 +19,7 @@ public:
 
     virtual void                checkProperties(int eID);
     virtual void                assignController(int eID);
-
+    std::string         displayRequirements();
 private:
     System*             mSystemPtr;
     std::bitset<32>     mRequirements;
