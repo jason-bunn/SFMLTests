@@ -4,6 +4,7 @@
 
 #include <tgd/BaseFactory.hpp>
 #include <bitset>
+#include <memory>
 namespace tgd
 {
 
@@ -14,12 +15,13 @@ class ControllerFactory : public BaseFactory
 {
 
 public:
-                        ControllerFactory(System* system);
+                                ControllerFactory(System* system);
     virtual                    ~ControllerFactory();
 
-    virtual void                checkProperties(int eID);
-    virtual void                assignController(int eID);
-    std::string         displayRequirements();
+    virtual bool                checkProperties(std::bitset<32> propMask);
+
+    virtual std::shared_ptr<Controller>  assignController(int cID, int eID);
+    std::string                 displayRequirements();
 private:
     System*             mSystemPtr;
     std::bitset<32>     mRequirements;

@@ -2,7 +2,7 @@
 
 extern sf::Clock mGameClock;
 
-RenderController::RenderController(int id, int eID, tgd::System& mSystem)
+RenderController::RenderController(int id, int eID, tgd::System* mSystem)
 : Controller(id, eID)
 , mBodySprite()
 , mPreviousPosition()
@@ -10,7 +10,7 @@ RenderController::RenderController(int id, int eID, tgd::System& mSystem)
 , mVFrame(0)
 , mCurrentDirection(Down)
 {
-    retrieveProperties(eID, mSystem);
+    retrieveProperties(eID, *mSystem);
 }
 
 RenderController::~RenderController()

@@ -26,7 +26,7 @@ public:
     };
 
 public:
-                    RenderController(int id, int eID, tgd::System& mSystem);
+                    RenderController(int id, int eID, tgd::System* mSystem);
                     ~RenderController();
     virtual int     getID();
     virtual int     getEntityID();

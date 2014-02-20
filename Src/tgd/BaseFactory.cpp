@@ -10,15 +10,15 @@ tgd::BaseFactory::~BaseFactory()
 
 }
 
-void tgd::BaseFactory::checkProperties(int eID)
+bool tgd::BaseFactory::checkProperties(std::bitset<32> newBits)
 {
 
 }
 
-void tgd::BaseFactory::assignController(int eID)
-{
+//std::shared_ptr tgd::BaseFactory::assignController(int cID, int eID)
+//{
 
-}
+//}
 
 std::string tgd::BaseFactory::displayRequirements()
 {

@@ -1,8 +1,11 @@
 #ifndef TGD_BASEFACTORY_HPP
 #define TGD_BASEFACTORY_HPP
 
-#include <string>
+#include <tgd/Controller.hpp>
 
+#include <string>
+#include <bitset>
+#include <memory>
 namespace tgd
 {
     class BaseFactory
@@ -10,9 +13,13 @@ namespace tgd
     public:
                             BaseFactory();
         virtual             ~BaseFactory();
-        virtual void        checkProperties(int eID);
-        virtual void        assignController(int eID);
+        virtual bool        checkProperties(std::bitset<32> newBits);
+
+        virtual std::shared_ptr<Controller>        assignController(int cID, int eID)=0;
         virtual std::string      displayRequirements();
     };
 }
+
+
+
 #endif // TGD_BASEFACTORY_HPP

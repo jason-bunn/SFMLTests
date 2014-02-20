@@ -1,15 +1,15 @@
 #include <controllers/PlayerController.hpp>
 #include <SFML/Window/Keyboard.hpp>
 
-PlayerController::PlayerController(int id, int eID, tgd::System& mSystem)
+PlayerController::PlayerController(int id, int eID, tgd::System* mSystem)
 : Controller(id, eID)
 , mMoveVector()
 , mSprite(nullptr)
-, mMapPtr(mSystem.mMapPtr)
+, mMapPtr(mSystem->mMapPtr)
 , mColFlag(-1)
 , moveDir(Down)
 {
-    retrieveProperties(eID, mSystem);
+    retrieveProperties(eID, *mSystem);
     mMoveVector = sf::Vector2f(0,0);
 
     //setup collision points

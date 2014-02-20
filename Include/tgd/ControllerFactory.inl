@@ -14,16 +14,30 @@ tgd::ControllerFactory<T>::~ControllerFactory()
 }
 
 template <typename T>
-void tgd::ControllerFactory<T>::checkProperties(int eID)
+bool tgd::ControllerFactory<T>::checkProperties(std::bitset<32> propMask)
 {
     //check the properties of the entity to see if there is a match for factory requirements
-
+    bool temp = false;
+    for(int i=0; i<mRequirements.size(); i++)
+    {
+        if(mRequirements.test(i) && propMask.test(i))
+        {
+            temp = true;
+        }
+        else
+        {
+            temp = false;
+            break;
+        }
+    }
+    return temp;
 }
 template <typename T>
-void tgd::ControllerFactory<T>::assignController(int eID)
+std::shared_ptr<tgd::Controller> tgd::ControllerFactory<T>::assignController(int cID, int eID)
 {
     //must have someway of getting shared pointer back to system to be placed onto controller map
-
+    auto temp = std::make_shared<T>(cID, eID, mSystemPtr);
+    return temp;
 }
 
 template <typename T>

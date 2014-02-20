@@ -49,7 +49,7 @@ namespace tgd
         void                        createEntity();
         bool                        isPlayerCreated();
 
-        unsigned int                assignControllerID();
+        int                assignControllerID();
 
         std::shared_ptr<Entity>     fetchEntity(int eID);
         std::shared_ptr<Entity>     findEntityByName(std::string tag);
@@ -71,7 +71,7 @@ namespace tgd
         std::map<unsigned int, std::shared_ptr<Entity>>   mEntities;
         std::map<unsigned int, std::string>               mEntityTags;
         unsigned int                                      mEntityCount;
-        unsigned int                                      mControllerCount;
+        int                                               mControllerCount;
         bool                                              mPlayerCreated;
         Events::EventRouter*                              mEventRouter;
         std::vector<std::shared_ptr<tgd::BaseFactory>>    mFactories;

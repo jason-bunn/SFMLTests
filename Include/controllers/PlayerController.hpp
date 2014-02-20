@@ -26,7 +26,7 @@ public:
         Right,
     };
 public:
-                        PlayerController(int id, int eID, tgd::System& mSystem);
+                        PlayerController(int id, int eID, tgd::System* mSystem);
                         ~PlayerController();
 
     void                update(sf::Time dt);
