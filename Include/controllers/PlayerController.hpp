@@ -31,7 +31,7 @@ public:
 
     void                update(sf::Time dt);
     void                handleRealtimeInput();
-    int                 getRequirements();
+
 
     virtual int         getID();
     virtual int         getEntityID();
@@ -41,6 +41,7 @@ public:
 
     void                setVelocity(sf::Vector2f moveVector, sf::Time dt);
     std::bitset<8>         checkCollisions();
+    static std::bitset<32> getRequirements();
 
 public:
     sf::Vector2f        collisionPoints[8] {}; //represents four corners of sprite

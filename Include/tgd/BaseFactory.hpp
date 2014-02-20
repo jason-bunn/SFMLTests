@@ -7,7 +7,7 @@ namespace tgd
     {
     public:
                             BaseFactory();
-
+        virtual             ~BaseFactory();
         virtual void        checkProperties(int eID);
         virtual void        assignController(int eID);
     };

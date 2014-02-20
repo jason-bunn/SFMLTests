@@ -16,6 +16,8 @@ tgd::System::System(TextureHolder& textures, sf::RenderTarget& target, Events::E
 , mFactories()
 {
     //textureHolder = textures;
+    createFactory<PlayerController>(this);
+    createFactory<RenderController>(this);
 }
 
 tgd::System::~System()

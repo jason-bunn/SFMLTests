@@ -5,6 +5,11 @@ tgd::BaseFactory::BaseFactory()
 
 }
 
+tgd::BaseFactory::~BaseFactory()
+{
+
+}
+
 void tgd::BaseFactory::checkProperties(int eID)
 {
 

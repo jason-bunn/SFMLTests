@@ -15,10 +15,10 @@ class ControllerFactory : public BaseFactory
 
 public:
                         ControllerFactory(System* system);
-                        ~ControllerFactory();
+    virtual                    ~ControllerFactory();
 
-    void                checkProperties(int eID);
-    void                assignController(int eID);
+    virtual void                checkProperties(int eID);
+    virtual void                assignController(int eID);
 
 private:
     System*             mSystemPtr;

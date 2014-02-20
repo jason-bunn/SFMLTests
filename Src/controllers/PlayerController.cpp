@@ -118,12 +118,7 @@ std::bitset<8> PlayerController::checkCollisions()
     return bitMask;
 }
 
-int PlayerController::getRequirements()
-{
 
-    //this will return the requirements for the controller
-    return 0;
-}
 
 void PlayerController::retrieveProperties(int eID, tgd::System& system)
 {
@@ -147,5 +142,12 @@ void PlayerController::setVelocity(sf::Vector2f moveVector, sf::Time dt)
 {
 
     mSprite->move(moveVector * dt.asSeconds());
+
+}
+
+std::bitset<32> PlayerController::getRequirements()
+{
+
+    return (Properties::PC | Properties::Visible | Properties::Velocity | Properties::Position);
 
 }

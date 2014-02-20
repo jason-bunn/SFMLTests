@@ -63,7 +63,7 @@ namespace tgd
         void                        checkProperties(int id);
         void                        assignControllers(int id, std::bitset<32> newBits);
         template <typename T>
-        void                        createFactory();
+        void                        createFactory(System* system);
 
     private:
         std::unordered_map<int, std::vector<std::shared_ptr<Controller>>> controllerMap;
@@ -72,7 +72,7 @@ namespace tgd
         unsigned int                                      mEntityCount;
         bool                                              mPlayerCreated;
         Events::EventRouter*                              mEventRouter;
-        std::vector<std::unique_ptr<tgd::BaseFactory>>    mFactories;
+        std::vector<std::shared_ptr<tgd::BaseFactory>>    mFactories;
 
 
     };

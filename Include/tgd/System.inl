@@ -21,10 +21,10 @@ void tgd::System::registerEntity(std::shared_ptr<T> entity)
 }
 
 template <typename T>
-void tgd::System::createFactory()
+void tgd::System::createFactory(tgd::System* system)
 {
-    std::unique_ptr<tgd::ControllerFactory<T>> temp(new tgd::ControllerFactory<T>);
-
+    //std::unique_ptr<tgd::ControllerFactory<T>> temp(new tgd::ControllerFactory<T>(system));
+    auto temp = std::make_shared<tgd::ControllerFactory<T>>(system);
     mFactories.push_back(temp);
 }
 
