@@ -12,6 +12,8 @@ PlayerController::PlayerController(int id, int eID, tgd::System* mSystem)
     retrieveProperties(eID, *mSystem);
     mMoveVector = sf::Vector2f(0,0);
 
+    std::cout << "Player Controller Created" << std::endl;
+
     //setup collision points
     collisionPoints[0] = sf::Vector2f(-25, -32); //top left
     collisionPoints[1] = sf::Vector2f( 25, -32); //top right

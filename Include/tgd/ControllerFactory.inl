@@ -20,14 +20,18 @@ bool tgd::ControllerFactory<T>::checkProperties(std::bitset<32> propMask)
     bool temp = false;
     for(int i=0; i<mRequirements.size(); i++)
     {
-        if(mRequirements.test(i) && propMask.test(i))
+        if(mRequirements[i] == 1 && propMask[i] == 1)
         {
             temp = true;
         }
         else
         {
-            temp = false;
-            break;
+            if(mRequirements[i] == 1 && propMask[i] != 1)
+            {
+                temp = false;
+                break;
+            }
+
         }
     }
     return temp;
