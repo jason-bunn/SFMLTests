@@ -21,10 +21,14 @@ void QuadTree::clear(sf::FloatRect bounds)
     mDepth = 0u;
 }
 
-void QuadTree::insert(sf::Sprite& object)
+void QuadTree::insert(std::shared_ptr<tgd::Entity> object)
 {
     //check if an object falls completely outside of a node
-    if(!object.getGlobalBounds().intersects(mBounds))
+    auto propPtr = std::dynamic_pointer_cast<tgd::Property<sf::Sprite>>(object->accessProperty(Properties::Visible));
+
+    sf::Sprite* tempSprite = propPtr->getValue();
+
+    if(!tempSprite->getGlobalBounds().intersects(mBounds))
     {
         return;
     }
@@ -32,7 +36,7 @@ void QuadTree::insert(sf::Sprite& object)
     //if node is already split add object to corresponding child node if it fits
     if(!mChildren.empty())
     {
-        sf::Int16 index = getIndex(object.getGlobalBounds());
+        sf::Int16 index = getIndex(tempSprite->getGlobalBounds());
         if(index != -1)
         {
             mChildren[index]->insert(object);
@@ -40,7 +44,7 @@ void QuadTree::insert(sf::Sprite& object)
         }
     }
     //else add object to this node
-    mObjects.push_back(const_cast<sf::Sprite*>(&object));
+    mObjects.push_back(object);
 
     //check number of objects in this node and split if necessary
     //adding any objects that fit to the new child noe
@@ -55,10 +59,12 @@ void QuadTree::insert(sf::Sprite& object)
         sf::Int16 i = 0;
         while(i < mObjects.size())
         {
-            sf::Int16 index = getIndex(mObjects[i]->getGlobalBounds());
+            auto prop = std::dynamic_pointer_cast<tgd::Property<sf::Sprite>>(mObjects[i]->accessProperty(Properties::Visible));
+            sf::Sprite* tempSpr = prop->getValue();
+            sf::Int16 index = getIndex(tempSpr->getGlobalBounds());
             if(index != -1)
             {
-                mChildren[index]->insert(*mObjects[i]);
+                mChildren[index]->insert(mObjects[i]);
                 mObjects.erase(mObjects.begin() + i);
             }
             else
@@ -84,10 +90,10 @@ void QuadTree::split()
 
 }
 
-std::vector<sf::Sprite*> QuadTree::retrieve(sf::FloatRect bounds, sf::Uint16 searchDepth)
+std::vector<std::shared_ptr<tgd::Entity>> QuadTree::retrieve(sf::FloatRect bounds, sf::Uint16 searchDepth)
 {
     searchDepth = mLevel;
-    std::vector<sf::Sprite*> foundObjects;
+    std::vector<std::shared_ptr<tgd::Entity>> foundObjects;
     sf::Int16 index = getIndex(bounds);
 
     //recursively add objects of child node if bounds is full contained
@@ -102,7 +108,7 @@ std::vector<sf::Sprite*> QuadTree::retrieve(sf::FloatRect bounds, sf::Uint16 sea
         {
             if(bounds.intersects(child->mBounds))
             {
-                std::vector<sf::Sprite*> childObjects = child->retrieve(bounds, searchDepth);
+                std::vector<std::shared_ptr<tgd::Entity>> childObjects = child->retrieve(bounds, searchDepth);
                 foundObjects.insert(foundObjects.end(), childObjects.begin(), childObjects.end());
             }
         }

@@ -1,6 +1,8 @@
 #ifndef QUADTREE_HPP
 #define QUADTREE_HPP
 
+#include <tgd/Property.hpp>
+#include <tgd/Entity.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 
 #include <vector>
@@ -12,8 +14,8 @@ public:
                                 QuadTree(sf::Uint16 pLevel, sf::FloatRect bounds);
 
     void                        clear(sf::FloatRect bounds);
-    void                        insert(sf::Sprite& sprite);
-    std::vector<sf::Sprite*>    retrieve(sf::FloatRect bounds, sf::Uint16 currentDepth);
+    void                        insert(std::shared_ptr<tgd::Entity> object);
+    std::vector<std::shared_ptr<tgd::Entity>>    retrieve(sf::FloatRect bounds, sf::Uint16 currentDepth);
 
 private:
     void                        split();
@@ -23,7 +25,7 @@ private:
     const int                   MAX_OBJECTS;
     const int                   MAX_LEVELS;
     sf::Uint16                  mLevel;
-    std::vector<sf::Sprite*>    mObjects;
+    std::vector<std::shared_ptr<tgd::Entity>>    mObjects;
     sf::FloatRect               mBounds;
     std::vector<std::shared_ptr<QuadTree>> mChildren;
 
